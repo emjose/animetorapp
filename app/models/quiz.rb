@@ -1,3 +1,4 @@
-class Model2 < ActiveRecord::Base
-  # add associatons!
+class Quiz < ActiveRecord::Base
+    belongs_to :user
+    belongs_to :avatar
 end
