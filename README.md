@@ -16,11 +16,14 @@ To run the Anime-tor App, you will need to use the terminal on your computer.
 
 ## Installation and Running the Application
 
-After cloning the repository onto your computer, please run the following commands in your terminal:
+After cloning the repository onto your computer, please run the following commands, one at a time, in your terminal:
 ```
     bundle install
-    rake db:seed
     rake db:migrate
+    rake db:seed
+```
+To run the Anime-Tor App, type the following into the terminal:
+```
     ruby bin/run.rb 
 ```
 To navigate, use the enter and arrow keys on your keyboard.
@@ -30,6 +33,8 @@ To navigate, use the enter and arrow keys on your keyboard.
 Jade Decordova
 
 Emmanuel Jose
+
+<!-- Special Thank You to Franklin Bado for his Avatar knowledge and expertise. -->
 
 ## Resources
 
