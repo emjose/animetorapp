@@ -1,3 +1,5 @@
+#comment
+
 Plant.destroy_all
 Person.destroy_all
 PlantParenthood.destroy_all
