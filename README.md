@@ -1,6 +1,6 @@
 # Anime-Tor App
 
-The Anime-Tor App is a CLI-based app inspired by the animated Nickelodeon tv show Avatar: The Last Airbender.
+The Anime-Tor App is a CLI-based app inspired by the animated Nickelodeon TV show Avatar: The Last Airbender.
 
 The user is presented with a divination personality test to determine which reincarnations (Avatar characters) they are most similar to.
 
@@ -28,7 +28,12 @@ To navigate, use the enter and arrow keys on your keyboard.
 ## Contributors
 
 Jade Decordova
+
 Emmanuel Jose
+
+## Resources
+
+https://avatar.fandom.com/wiki/Avatar_Wiki
 
 
 
