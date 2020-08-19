@@ -1,4 +1,39 @@
-## Process
+# Anime-Tor App
+
+The Anime-Tor App is a CLI-based app inspired by the animated Nickelodeon tv show Avatar: The Last Airbender.
+
+The user is presented with a divination personality test to determine which reincarnations (Avatar characters) they are most similar to.
+
+Once a user has been matched to an Avatar character, the user has the options of collecting more reincarnations by retaking the quiz, viewing more results, and deleting any previous reincarnations.
+
+***
+## Getting Started
+To run the Anime-tor App, you will need to use the terminal on your computer.
+
+```
+    git clone https://github.com/emjose/animetorapp.git
+```
+
+## Installation and Running the Application
+
+After cloning the repository onto your computer, please run the following commands in your terminal:
+```
+    bundle install
+    rake db:seed
+    rake db:migrate
+    ruby bin/run.rb 
+```
+To navigate, use the enter and arrow keys on your keyboard.
+
+## Contributors
+
+Jade Decordova
+Emmanuel Jose
+
+
+
+
+<!-- ## Process 
 
 ### NOTE
 - this setup contains a rakefile with helpful process reminders
@@ -45,5 +80,5 @@
 ## Tutorials
 - [Adding animations to your CLI by Sylwia Vargas](https://medium.com/better-programming/add-an-animation-or-a-giph-to-your-ruby-cli-29952e8c46ea)
 - [Adding ASCII Art to your CLI by Sylwia Vargas](https://medium.com/@sylwiavargas/adding-pictures-to-your-ruby-cli-4252b89823a)
-- [Using Time/Date in your CLI by Joel Mendoza](https://medium.com/@joelmendza173/ruby-date-time-for-dummies-9f45518bab64)
+- [Using Time/Date in your CLI by Joel Mendoza](https://medium.com/@joelmendza173/ruby-date-time-for-dummies-9f45518bab64) -->
 
