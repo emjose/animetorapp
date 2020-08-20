@@ -9,8 +9,6 @@ User.reset_pk_sequence
 
 # 2. keep avatar instances in the seed file, use Avatar.find_by()
 
-
-
 #Avatar Characters
 # sozin = Avatar.create(avatar_id: “Sozin, the intelligent yet ruthless Fire Lord and instigator of the Hundred Year War.”)
 sozin = Avatar.create(name: "Sozin", desc: "the intelligent yet ruthless Fire Lord and instigator of the Hundred Year War.") 
@@ -122,16 +120,25 @@ cabbageman = Avatar.create(name: "The Cabbage Man", desc: "Also known as the cab
 
 
 #Minor Characters as User instances, for method find other users?
-joodee = User.create(name: “Joo Dee”)
-princessyue = User.create(name: “Princess Yue”)
-grangran = User.create(name: “Gran-Gran”)
-auntwu = User.create(name: “Aunt Wu”)
-chiefhakoda = User.create(name: “Chief Hakoda”)
-arnook = User.create(name: “Arnook”)
-theboulder = User.create(name: “The Boulder”)
-haru = User.create(name: “Haru”)
-teo = User.create(name: “Teo”)
-onji = User.create(name: “On Ji”)
+joodee = User.create(name: "Joo Dee")
+
+princessyue = User.create(name: "Princess Yue")
+
+grangran = User.create(name: "Gran-Gran")
+
+auntwu = User.create(name: "Aunt Wu")
+
+chiefhakoda = User.create(name: "Chief Hakoda")
+
+arnook = User.create(name: "Arnook")
+
+theboulder = User.create(name: "The Boulder")
+
+haru = User.create(name: "Haru")
+
+teo = User.create(name: "Teo")
+
+onji = User.create(name: "On Ji")
 
 
 
