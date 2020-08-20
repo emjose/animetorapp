@@ -8,21 +8,11 @@ attr accessor :username, :avatar
 def initialize(username_par)
     @username = username_par
 end
-def my_avatar(avatar)
-    use
-
-def set_avatar #sets the user to an instance of the Avatar class
-
-end 
-def Collect_avatars #shovels all the characters associated with a particular user in an array
-
+def my_avatar
+    @my_avatars.first
 end
-
-def display_avatar #show's what Avatar instance your assigned to 
-
-end 
 def display_team #shows all the avatar instance you acquired
-
+    @my_avatars
 end
 
 end
