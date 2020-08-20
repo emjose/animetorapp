@@ -4,7 +4,7 @@ module Quizzer
     question1 = [ "How many Nations exist in The Avatar Series?
     ", %w(6 2 3 4) ]
     question2 = ["Where did Sokka and Katara find Aang?", ["Under the ocean", "In A Shipwreck", "In a Ball of Ice", "By his old air Temple"]]
-    question3 = ["Who was the avatar before Aang?", %w( Korra Azula Roku Yengchen
+    question3 = ["Who was the avatar before Aang?", %w(Korra Azula Roku Yengchen
     )]
     question4 =["Who was Aang's mentor and Guardian at the air temple?", %w(Ganchu Gyatso Moi-Fei Jeong-jong )]
     question5 = ["Select the Firebender from below", %w(mai pipsqueak bumi appa)]
@@ -24,11 +24,14 @@ module Quizzer
     #yes_no("Do you consider the name Franklin to be exceptionally cool!")
     return @@avatar_tally= 0
         quiz = [question1, question2, question3, question4, question5, question6, question15,
-   question7, question8, question9, question10, question11, question12, question13, question14 ]
+   question7, question8, question9, question10, question11, question12, question13, question14, question15 ]
 
-def make_quiz
-    set (question1)
+def make_quiz(quiz)
+    counter = 0
+    while counter < quiz.length 
+        set(quiz[counter])
     binding.pry
+    end
 
 end
 
@@ -41,3 +44,5 @@ def results
 end
 
 make_quiz
+
+

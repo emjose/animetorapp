@@ -9,6 +9,8 @@ class Animetor
    login
    wanna_see_the_best
    wanna_join_the_fight
+   display_quiz
+
 # class Interface
   private
 
@@ -35,6 +37,47 @@ end
     answer = yes_no("I Have a Strong feeling that your no ordinary Human, complete the Divinity test to Confirm my Suspicion")
       return make_quiz if answer
   end
+
+  def display_quiz
+
+  end
+
+  
+
+  def cogratulations
+   # if answer_sum < 6
+      # answer = yes_no(congrats1)
+  #elsif answer_sum > 6 || answer < 16
+  #     answer = yes_no(congrats2)
+  #elsif answer_sum > 16
+      # answer = yes_no(congrats3)
+  #else
+  #     yes_no(congrats4)
+
+  end 
+
+  def retake_quiz
+    @my_avatars < 2 ? display_quiz : puts @my_avatars
+  end
+
+
+
+
+  
+
+
+
+    congrats1 = "You are not the strongest ally to rely on in the fight to end the hundred year war,
+     but faith has chosen you #{avatar.name}, even though #{avatar.desc}. 
+     Now do you wish to join a team tohelp in the battle to restore restore peace!?"
+
+    congrats2 = " The strenght you have displayed before will not compare to what you 
+    will accomplish now #{avatar.name} you will be an invaluable ally for #{avatar.desc}.
+    We are really close to ending the war, continue building your team to see who you meet!"
+
+    congrats3 = "The who need to end the War has finally arrived, 100 years passed, but now #{avatar.name} 
+    is here and will valiently
+    apply his skills to end the war for #{avatar.desc}, only you can save the World  "
 
 
     welcome_message = "Welcome to the World of Benders! Its been 100 years since the last Avatar has vanished.

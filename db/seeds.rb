@@ -1,4 +1,8 @@
-
+#emoji = [🔥🔥🌪🌪🌊🌊🌍🌎] 
+#fire_emoji = 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+#water_emoji = 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
+#wind_emoji = 🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪🌪
+#earth_emoji = 🌍🌎🌍🌎🌍🌎🌍🌎🌍🌎🌍🌎🌍🌎🌍🌎🌍🌎
 
 def quiz(quizzes)
     prompt = TTY::Prompt.new
