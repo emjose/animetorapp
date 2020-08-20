@@ -9,7 +9,7 @@ class Animetor
    login
    wanna_see_the_best
    wanna_join_the_fight
-class Interface
+# class Interface
   private
 
 
@@ -28,7 +28,7 @@ class Interface
       end
 end
   def wanna_see_the_best
-    answer = yes_no("Wanna see your fav jokes?")
+    answer = yes_no("Wish to see the strongest Heroes who have gone before you")
     return @@all_avatar.last(5) if answer
   end
   def wanna_join_the_fight

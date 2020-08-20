@@ -1,5 +1,18 @@
 
 
+def quiz(quizzes)
+    prompt = TTY::Prompt.new
+    quizzes.each do |question|
+        prompt.select(q[0]) do |menu|
+      menu.choice q[1][0], 0
+      menu.choice q[1][1], 1
+      menu.choice q[1][2], 0
+      menu.choice q[1],[3] 0
+    end
+    @@answer_total << answer_one
+  end
+
+
   question1 = [ "How many Nations exist in The Avatar Series?
   ", %w(6 2 3 4) ]
   question2 = ["Where did Sokka and Katara find Aang?", ["Under the ocean", "In A Shipwreck", "In a Ball of Ice", "By his old air Temple"]]
