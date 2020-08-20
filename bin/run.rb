@@ -1,6 +1,6 @@
 require_relative '../config/environment'
 
-app = nameOfYourApp.new
+app = Animator.new
 app.run
 
 #run this
