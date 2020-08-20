@@ -1,6 +1,10 @@
-module Quizzer
-    include CliControls
+# module Quizzer
+#     include CliControls
+def quizzed
+    @answer_total = []
 
+    prompt = TTY::Prompt.new
+    
     question1 = [ "How many Nations exist in The Avatar Series?
     ", %w(6 2 3 4) ]
     question2 = ["Where did Sokka and Katara find Aang?", ["Under the ocean", "In A Shipwreck", "In a Ball of Ice", "By his old air Temple"]]
@@ -19,30 +23,45 @@ module Quizzer
     )]
     question13 = ["Who was the instructor that left shortly after we started", %w(Mike Sylwia Larry Jack)]
     question14 = ["What thought Aang how to energy-bend?", %w(Twin-Dragon Great-Owl Iron-turtle Lion-Turtle	)]
-    question15 = ["Who gave up their life to restore the bridge of Ying and Yan In the spirit and physical world?"
-, %w(Sokka Taaluk Princess-Yue	Queen-Leigh)]
-    #yes_no("Do you consider the name Franklin to be exceptionally cool!")
-    return @@avatar_tally= 0
-        quiz = [question1, question2, question3, question4, question5, question6, question15,
-   question7, question8, question9, question10, question11, question12, question13, question14, question15 ]
+    question15 = ["Who gave up their life to restore the bridge of Ying and Yan In the spirit and physical world?", %w(sokka taaluk princess-yue queen-leigh)]
+    # yes_no("Do you consider the name Franklin to be exceptionally cool!")
+    # return @answer_total = 0
 
-def make_quiz(quiz)
+        quiz = [question1, question2, question3, question4, question5, question6, question15,
+   question7, question8, question9, question10, question11, question12, question13, question14, question15]
+
+def question(question_array)
+    answer = prompt.select(question_array[0]) do |menu|
+         menu.choice question_array[1][0], 0
+         menu.choice question_array[1][1], 1
+         menu.choice question_array[1][2], 0
+         menu.choice question_array[1][3], 0
+    end
+end  
+def make_quiz(quizzes)
     counter = 0
-    while counter < quiz.length 
-        set(quiz[counter])
-    binding.pry
+    while counter < quizzes.length do 
+        question(quizzes[counter])
+        @answer_total << answer
+        binding.pry
+        counter += 1
+    end
+end
+
+        # end
+
+        # def get_quiz
+
+        # end
+
+        # def results
+
+        # end
+
+        make_quiz(quiz)
     end
 
-end
+quizzed
 
-def get_quiz
-
-end
-
-def results
-
-end
-
-make_quiz
 
 
