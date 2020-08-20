@@ -174,193 +174,96 @@
 #     @@answer_total << answer_fifteen
 #   end
 
-  # def assign_avatar
-  #   puts "The Divination Test has determined..."
-  #   sleep 3
-  #   if @@answer_total.reduce(:+) = 5
-  #     sozin = Avatar.find_by(name = "Sozin")
-  #     puts "that you are #{sozin.name}, #{sozin.desc}".bold 
-#     elsif @@answer_total.reduce(:+) = 6
-#       ozai = Avatar.create(avatar_id: “Ozai, the strong and power-hungry ruler of the Fire Nation with an almost unmatchable mastery of firebending.”)
-#       puts "that you are #{ozai}".bold 
-#     elsif @@answer_total.reduce(:+) = 7
-#       hama = Avatar.create(avatar_id: “Hama, a seemingly gentle and kind old woman, but you harbor a dark skill of bending blood to your will.”)
-#       puts "that you are #{hama}".bold 
-#     elsif @@answer_total.reduce(:+) = 8
-#       momo = Avatar.create(avatar_id: “Momo, the winged lemur companion of Avatar Aang. You are curious, playful, intelligent, and most of all, loyal.”)
-#       puts "that you are #{momo}".bold
-#     elsif @@answer_total.reduce(:+) = 9
-#       appa = Avatar.create(avatar_id: “Appa, the loyal and trusted Sky bison of Avatar Aang. Despite numerous obstacles, you persevere and rise to the occasion.”)
-#       puts "that you are #{appa}".bold
-#     elsif @@answer_total.reduce(:+) = 10
-#       mai = Avatar.create(avatar_id: “Mai, a master markswoman of knives and arrows. You are outwardly stoic and brooding, but you are flowing with compassion and mercy.”)
-#       puts "that you are #{mai}".bold
-#     elsif @@answer_total.reduce(:+) = 11
-#       suki = Avatar.create(avatar_id: “Suki, a woman of action who excels in hand-to-hand combat. You are a fast learner and possess a strong sense of duty.”)
-#       puts "that you are #{suki}".bold
-#     elsif @@answer_total.reduce(:+) = 12
-#       june = Avatar.create(avatar_id: “June, an exceptional bounty hunter with a sarcastic wit. You have no allegiance to anyone, except for the highest bidder of your services.”)
-#       puts "that you are #{june}".bold
-#     elsif @@answer_total.reduce(:+) = 13
-#       bumi = Avatar.create(avatar_id: “Bumi, the rambunctious son of Avatar Aang. You are at times reckless, but you always have the best interests of your loved ones.”)
-#       puts "that you are #{bumi}".bold
-#     elsif @@answer_total.reduce(:+) = 14
-#       sokka = Avatar.create(avatar_id: “Sokka, the skeptical and abrasive brother of Katara. You learn to be flexible over time, and you have no shortage of loyalty.”
-#       puts "that you are #{sokka}".bold
-#     elsif @@answer_total.reduce(:+) = 15
-#       combustionman = Avatar.create(avatar_id: “The Combustion Man, a masterful and silent firebending assassin with a unique ability to detonate large explosions from your third-eye tattoo.”)
-#       puts "that you are #{combustionman}".bold
-#     elsif @@answer_total.reduce(:+) = 16
-#       kuruk = Avatar.create(avatar_id: “Kuruk, the Water Tribe-born Avatar. At times you are your own worst enemy, but you are widely loved by your friends and family.
-#       puts "that you are #{kuruk}".bold
-#     elsif @@answer_total.reduce(:+) = 17
-#       tenzin = Avatar.create(avatar_id: “Tenzin, the youngest son of Avatar Aang. You are an airbending master and stern in nature, but a sense of humor does slip through at times.”
-#       puts "that you are #{tenzin}".bold
-#     elsif @@answer_total.reduce(:+) = 18
-#       jet = Avatar.create(avatar_id: “Jet, the young leader of the Earth Kingdom Freedom Fighters. Although you are fueled by revenge, you have a magnetic, charismatic personality.”)
-#       puts "that you are #{jet}".bold
-#     elsif @@answer_total.reduce(:+) = 19
-#       gyatso = Avatar.create(avatar_id: “Gyatso, the kind, wise mentor of Avatar Aang. You are excellent at airbending and you balance your wisdom with a great sense of humor.”)
-#       puts "that you are #{gyatso}".bold
-#     elsif @@answer_total.reduce(:+) = 20
-#       korra = Avatar.create(avatar_id: “Korra, the immediate successor of Avatar Aang. Extremely powerful at bending all elements, you are fierce and possess strong loyalty towards your loved ones and duty as the Avatar.”)
-#       puts "that you are #{korra}".bold
-#     elsif @@answer_total.reduce(:+) = 21
-#       zuko = Avatar.create(avatar_id: “Zuko, the prodigal son of Fire Lord Ozai. Despite internal struggle and turmoil, you are driven by hope and achieve great wisdom.”)
-#       puts "that you are #{zuko}".bold
-#     elsif @@answer_total.reduce(:+) = 22
-#       toph = Avatar.create(avatar_id: “Toph, a powerful, earthbending master. Your visual impairment is of no hindrance, and you are confident, honest, and full of no-nonsense.”)
-#       puts "that you are #{toph}".bold
-#     elsif @@answer_total.reduce(:+) = 23
-#       azula = Avatar.create(avatar_id: “Azula, a firebending prodigy and sister of Zuko. At times lacking empathy, you overcome your insecurities and discover a strong sense of self.”)
-#       puts "that you are #{azula}".bold
-#     elsif @@answer_total.reduce(:+) = 24
-#       roku = Avatar.create(avatar_id: “Roku, the wise Fire Nation-born Avatar. You are self-critical and regretful, but you are warm-hearted, disciplined, and wise.”)
-#       puts "that you are #{roku}".bold
-#     elsif @@answer_total.reduce(:+) = 25
-#       kyoshi = Avatar.create(avatar_id: “Kyoshi, the Earth Kingdom-born Avatar. You are a merciless pursuer of justice, and you have a far-reaching legacy of fear and admiration.”)
-#       puts "that you are #{kyoshi}".bold
-#     elsif @@answer_total.reduce(:+) = 26
-#       iroh = Avatar.create(avatar_id: “Iroh, a retired Fire Nation General and compassionate uncle of Zuko. You are wise, easygoing, and you live life to the fullest.”
-#       puts "that you are #{iroh}".bold
-#     elsif @@answer_total.reduce(:+) = 27
-#       yangchen = Avatar.create(avatar_id: “Yangchen, the Air Nomad Avatar before Aang. You are an encouraging and empathetic leader, and you are known for your great compassion.”)
-#       puts "that you are #{yangchen}".bold
-#     elsif @@answer_total.reduce(:+) = 28
-#       katara = Avatar.create(avatar_id: “Katara, a waterbending master. You are compassionate, and your inner strength drives your determination to fight for your loved ones.”)
-#       puts "that you are #{katara}".bold
-#     elsif @@answer_total.reduce(:+) = 29
-#       aang = Avatar.create(avatar_id: “Aang, the Air Nomad Avatar. As a reluctant hero, you are somewhat naïve and carefree, but you rise to the duty as the Avatar to bring peace to the World of the Benders.”)
-#       puts "that you are #{aang}".bold
-#     elsif @@answer_total.reduce(:+) = 30
-#       wan = Avatar.create(avatar_id: “Wan, the very first Avatar. You are initially reckless and temperamental, but only because you feel that others are being treated unjustly. You are humble, brave, and achieve full mastery of Air, Water, Earth, and Fire!
-#       puts "that you are #{wan}".bold
-#     elsif @@answer_total.reduce(:+) >= 50
-#       cabbageman = Avatar.create(avatar_id: “The Cabbage Man! Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.”)
-#       puts "that you are #{cabbageman}".bold
-#     end
-#   end
-
-
-#   def assign_avatar
-#     puts "The Divination Test has determined..."
-#     sleep 3
-#     if @@answer_total.reduce(:+) = 5
-#       sozin = Avatar.create(avatar_id: “Sozin, the intelligent yet ruthless Fire Lord and instigator of the Hundred Year War.”)
-#       puts "that you are #{sozin.avatar_id}".bold 
-#     elsif @@answer_total.reduce(:+) = 6
-#       ozai = Avatar.create(avatar_id: “Ozai, the strong and power-hungry ruler of the Fire Nation with an almost unmatchable mastery of firebending.”)
-#       puts "that you are #{ozai.avatar_id}".bold 
-#     elsif @@answer_total.reduce(:+) = 7
-#       hama = Avatar.create(avatar_id: “Hama, a seemingly gentle and kind old woman, but you harbor a dark skill of bending blood to your will.”)
-#       puts "that you are #{hama.avatar_id}".bold 
-#     elsif @@answer_total.reduce(:+) = 8
-#       momo = Avatar.create(avatar_id: “Momo, the winged lemur companion of Avatar Aang. You are curious, playful, intelligent, and most of all, loyal.”)
-#       puts "that you are #{momo.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 9
-#       appa = Avatar.create(avatar_id: “Appa, the loyal and trusted Sky bison of Avatar Aang. Despite numerous obstacles, you persevere and rise to the occasion.”)
-#       puts "that you are #{appa.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 10
-#       mai = Avatar.create(avatar_id: “Mai, a master markswoman of knives and arrows. You are outwardly stoic and brooding, but you are flowing with compassion and mercy.”)
-#       puts "that you are #{mai.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 11
-#       suki = Avatar.create(avatar_id: “Suki, a woman of action who excels in hand-to-hand combat. You are a fast learner and possess a strong sense of duty.”)
-#       puts "that you are #{suki.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 12
-#       june = Avatar.create(avatar_id: “June, an exceptional bounty hunter with a sarcastic wit. You have no allegiance to anyone, except for the highest bidder of your services.”)
-#       puts "that you are #{june.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 13
-#       bumi = Avatar.create(avatar_id: “Bumi, the rambunctious son of Avatar Aang. You are at times reckless, but you always have the best interests of your loved ones.”)
-#       puts "that you are #{bumi.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 14
-#       sokka = Avatar.create(avatar_id: “Sokka, the skeptical and abrasive brother of Katara. You learn to be flexible over time, and you have no shortage of loyalty.”
-#       puts "that you are #{sokka.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 15
-#       combustionman = Avatar.create(avatar_id: “The Combustion Man, a masterful and silent firebending assassin with a unique ability to detonate large explosions from your third-eye tattoo.”)
-#       puts "that you are #{combustionman.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 16
-#       kuruk = Avatar.create(avatar_id: “Kuruk, the Water Tribe-born Avatar. At times you are your own worst enemy, but you are widely loved by your friends and family.
-#       puts "that you are #{kuruk.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 17
-#       tenzin = Avatar.create(avatar_id: “Tenzin, the youngest son of Avatar Aang. You are an airbending master and stern in nature, but a sense of humor does slip through at times.”
-#       puts "that you are #{tenzin.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 18
-#       jet = Avatar.create(avatar_id: “Jet, the young leader of the Earth Kingdom Freedom Fighters. Although you are fueled by revenge, you have a magnetic, charismatic personality.”)
-#       puts "that you are #{jet.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 19
-#       gyatso = Avatar.create(avatar_id: “Gyatso, the kind, wise mentor of Avatar Aang. You are excellent at airbending and you balance your wisdom with a great sense of humor.”)
-#       puts "that you are #{gyatso.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 20
-#       korra = Avatar.create(avatar_id: “Korra, the immediate successor of Avatar Aang. Extremely powerful at bending all elements, you are fierce and possess strong loyalty towards your loved ones and duty as the Avatar.”)
-#       puts "that you are #{korra.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 21
-#       zuko = Avatar.create(avatar_id: “Zuko, the prodigal son of Fire Lord Ozai. Despite internal struggle and turmoil, you are driven by hope and achieve great wisdom.”)
-#       puts "that you are #{zuko.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 22
-#       toph = Avatar.create(avatar_id: “Toph, a powerful, earthbending master. Your visual impairment is of no hindrance, and you are confident, honest, and full of no-nonsense.”)
-#       puts "that you are #{toph.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 23
-#       azula = Avatar.create(avatar_id: “Azula, a firebending prodigy and sister of Zuko. At times lacking empathy, you overcome your insecurities and discover a strong sense of self.”)
-#       puts "that you are #{azula.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 24
-#       roku = Avatar.create(avatar_id: “Roku, the wise Fire Nation-born Avatar. You are self-critical and regretful, but you are warm-hearted, disciplined, and wise.”)
-#       puts "that you are #{roku.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 25
-#       kyoshi = Avatar.create(avatar_id: “Kyoshi, the Earth Kingdom-born Avatar. You are a merciless pursuer of justice, and you have a far-reaching legacy of fear and admiration.”)
-#       puts "that you are #{kyoshi.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 26
-#       iroh = Avatar.create(avatar_id: “Iroh, a retired Fire Nation General and compassionate uncle of Zuko. You are wise, easygoing, and you live life to the fullest.”
-#       puts "that you are #{iroh.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 27
-#       yangchen = Avatar.create(avatar_id: “Yangchen, the Air Nomad Avatar before Aang. You are an encouraging and empathetic leader, and you are known for your great compassion.”)
-#       puts "that you are #{yangchen.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 28
-#       katara = Avatar.create(avatar_id: “Katara, a waterbending master. You are compassionate, and your inner strength drives your determination to fight for your loved ones.”)
-#       puts "that you are #{katara.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 29
-#       aang = Avatar.create(avatar_id: “Aang, the Air Nomad Avatar. As a reluctant hero, you are somewhat naïve and carefree, but you rise to the duty as the Avatar to bring peace to the World of the Benders.”)
-#       puts "that you are #{aang.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) = 30
-#       wan = Avatar.create(avatar_id: “Wan, the very first Avatar. You are initially reckless and temperamental, but only because you feel that others are being treated unjustly. You are humble, brave, and achieve full mastery of Air, Water, Earth, and Fire!
-#       puts "that you are #{wan.avatar_id}".bold
-#     elsif @@answer_total.reduce(:+) >= 50
-#       cabbageman = Avatar.create(avatar_id: “The Cabbage Man! Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.”)
-#       puts "that you are #{cabbageman.avatar_id}".bold
-#     end
-#   end
-
-
-      
+  def assign_avatar
+    puts "The Divination Test has determined..."
+    sleep 3
+      case @@answer_total.reduce(:+)
+      when 5
+      sozin = Avatar.find_by(name: "Sozin")
+      puts "that you are #{sozin.name}, #{sozin.desc}".bold
+      when 6
+      ozai = Avatar.find_by(name:"Ozai")
+      puts "that you are #{ozai.name}, #{ozai.desc}".bold
+      when 7
+      hama = Avatar.find_by(name: "Hama")
+      puts "that you are #{hama.name}, #{hama.desc}".bold
+      when 8
+      momo = Avatar.find_by(name:"Momo")
+      puts "that you are #{momo.name}, #{momo.desc}".bold
+      when 9
+      appa = Avatar.find_by(name: "Appa")
+      puts "that you are #{appa.name}, #{appa.desc}".bold
+      when 10
+      mai = Avatar.find_by(name: "Mai")
+      puts "that you are #{mai.name}, #{mai.desc}".bold
+      when 11
+      suki = Avatar.find_by(name:"Suki")
+      puts "that you are #{suki.name}, #{suki.desc}".bold 
+      when 12
+      june = Avatar.find_by(name: "June")
+      puts "that you are #{june.name}, #{june.desc}".bold  
+      when 13
+      bumi = Avatar.find_by(name: "Bumi")
+      puts "that you are #{bumi.name}, #{bumi.desc}".bold  
+      when 14
+      sokka = Avatar.find_by(name: "Sokka")
+      puts "that you are #{sokka.name}, #{sokka.desc}".bold  
+      when 15
+      combustionman = Avatar.find_by(name: "The Combustion Man")
+      puts "that you are #{combustionman.name}, #{combustionman.desc}".bold  
+      when 16
+      kuruk = Avatar.find_by(name: "Kuruk")
+      puts "that you are #{kuruk.name}, #{kuruk.desc}".bold  
+      when 17
+      tenzin = Avatar.find_by(name: "Tenzin")
+      puts "that you are #{tenzin.name}, #{tenzin.desc}".bold  
+      when 18
+      jet = Avatar.find_by(name: "Jet")
+      puts "that you are #{jet.name}, #{jet.desc}".bold  
+      when 19
+      gyatso= Avatar.find_by(name: "Gyatso")
+      puts "that you are #{gyatso.name}, #{gyatso.desc}".bold  
+      when 20
+      korra = Avatar.find_by(name: "Korra")
+      puts "that you are #{korra.name}, #{korra.desc}".bold  
+      when 21
+      zuko = Avatar.find_by(name: "Zuko")
+      puts "that you are #{zuko.name}, #{zuko.desc}".bold  
+      when 22
+      toph = Avatar.find_by(name :"Toph")
+      puts "that you are #{toph.name}, #{toph.desc}".bold  
+      when 23
+      azula = Avatar.find_by(name: "Azula")
+      puts "that you are #{azula.name}, #{azula.desc}".bold 
+      when 24
+      roku = Avatar.find_by(name: "Roku")
+      puts "that you are #{roku.name}, #{roku.desc}".bold  
+      when 25
+      kyoshi = Avatar.find_by(name: "Kyoshi")
+      puts "that you are #{kyoshi.name}, #{kyoshi.desc}".bold  
+      when 26
+      iroh = Avatar.find_by(name: "Iroh")
+      puts "that you are #{iroh.name}, #{iroh.desc}".bold  
+      when 27
+      yangchen = Avatar.find_by(name: "Yangchen")
+      puts "that you are #{yangchen.name}, #{yangchen.desc}".bold  
+      when 28
+      katara = Avatar.find_by(name: "Katara")
+      puts "that you are #{katara.name}, #{katara.desc}".bold  
+      when 29
+      aang = Avatar.find_by(name: "Aang")
+      puts "that you are #{aang.name}, #{aang.desc}".bold  
+      when 30
+      wan = Avatar.find_by(name: "Wan")
+      puts "that you are #{wan.name}, #{wan.desc}".bold  
+      when >= 50
+      cabbageman = Avatar.find_by(name: "The Cabbage Man")
+      puts "that you are #{cabbageman.name}, #{cabbageman.desc}".bold 
+    end
+  end
 
 
 
-
-
-
-
-      
-
-  
 
 #   private
 
