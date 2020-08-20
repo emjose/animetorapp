@@ -1,183 +1,184 @@
-# class Interface
-#   # here will be your CLI!
-#   # it is not an AR class so you need to add attr
+class Interface
+  # here will be your CLI!
+  # it is not an AR class so you need to add attr
 
-#   @@answer_total = []
+  @@answer_total = []
 
-#   # def run
-#   #   # welcome
-#   #   # login_or_signup
-#   #   # wanna_see_favs?
-#   #   # get_joke(what_subject)
-#   # end
+  # def run
+  #   # welcome
+  #   # login_or_signup
+  #   # wanna_see_favs?
+  #   # get_joke(what_subject)
+  # end
 
-#   def question_one
-#     prompt = TTY::Prompt.new
-#     answer_one = prompt.select("How many Nations exist in The Avatar Series?") do |menu|
-#       menu.choice "Six", 0
-#       menu.choice "Four", 1
-#       menu.choice "Three", 0
-#       menu.choice "Two", 0
-#     end
-#     @@answer_total << answer_one
-#   end
+  def question_one
+    prompt = TTY::Prompt.new
+    answer_one = prompt.select("How many Nations exist in The Avatar Series?") do |menu|
+      menu.choice "Six", 0
+      menu.choice "Four", 1
+      menu.choice "Three", 0
+      menu.choice "Two", 0
+    end
+    @@answer_total << answer_one
+  end
 
-#   def question_two
-#     prompt = TTY::Prompt.new
-#     answer_two = prompt.select("Where did Sokka and Katara find Aang?") do |menu|
-#       menu.choice "Under the ocean", 0
-#       menu.choice "Inside a shipwreck", 0
-#       menu.choice "Inside a ball of ice", 1
-#       menu.choice "Inside an abandoned temple", 0
-#     end
-#     @@answer_total << answer_two
-#   end
+  def question_two
+    prompt = TTY::Prompt.new
+    answer_two = prompt.select("Where did Sokka and Katara find Aang?") do |menu|
+      menu.choice "Under the ocean", 0
+      menu.choice "Inside a shipwreck", 0
+      menu.choice "Inside a ball of ice", 1
+      menu.choice "Inside an abandoned temple", 0
+    end
+    @@answer_total << answer_two
+  end
 
-#   def question_three
-#     prompt = TTY::Prompt.new
-#     answer_three = prompt.select("How many labs were you able to complete this week?") do |menu|
-#       menu.choice "fewer than 20", 1
-#       menu.choice "20 to 30", 2
-#       menu.choice "30 to 40", 3
-#       menu.choice "40 or more", 4
-#     end
-#     @@answer_total << answer_three
-#   end
+  def question_three
+    prompt = TTY::Prompt.new
+    answer_three = prompt.select("How many labs were you able to complete this week?") do |menu|
+      menu.choice "fewer than 20", 1
+      menu.choice "20 to 30", 2
+      menu.choice "30 to 40", 3
+      menu.choice "40 or more", 4
+    end
+    @@answer_total << answer_three
+  end
 
-#   def question_four
-#     prompt = TTY::Prompt.new
-#     answer_four = prompt.select("Who were the first earthbenders?") do |menu|
-#       menu.choice "The Dragons", 0
-#       menu.choice "Toph's ancestors", 0
-#       menu.choice "The Badgermoles", 1
-#       menu.choice "Avatar Kyoshi", 0
-#     end
-#     @@answer_total << answer_four
-#   end
+  def question_four
+    prompt = TTY::Prompt.new
+    answer_four = prompt.select("Who were the first earthbenders?") do |menu|
+      menu.choice "The Dragons", 0
+      menu.choice "Toph's ancestors", 0
+      menu.choice "The Badgermoles", 1
+      menu.choice "Avatar Kyoshi", 0
+    end
+    @@answer_total << answer_four
+  end
 
-#   def question_five
-#     prompt = TTY::Prompt.new
-#     answer_five = prompt.select("Which Avatar directly preceded Avatar Aang?") do |menu|
-#       menu.choice "Avatar Roku", 1
-#       menu.choice "Avatar Raava", 0
-#       menu.choice "Avatar Rohan", 0
-#       menu.choice "Avatar Rangi", 0
-#     end
-#     @@answer_total << answer_five
-#   end
+  def question_five
+    prompt = TTY::Prompt.new
+    answer_five = prompt.select("Which Avatar directly preceded Avatar Aang?") do |menu|
+      menu.choice "Avatar Roku", 1
+      menu.choice "Avatar Raava", 0
+      menu.choice "Avatar Rohan", 0
+      menu.choice "Avatar Rangi", 0
+    end
+    @@answer_total << answer_five
+  end
 
-#   def question_six
-#     prompt = TTY::Prompt.new
-#     answer_six = prompt.select("Who Suggested the Name 'The Code-Benders' for our cohort name?") do |menu|
-#       menu.choice "Patrick", 2
-#       menu.choice "Samantha", 4
-#       menu.choice "Franklin", 3
-#       menu.choice "Jade", 1
-#     end
-#     @@answer_total << answer_six
-#   end
+  def question_six
+    prompt = TTY::Prompt.new
+    answer_six = prompt.select("Who Suggested the Name 'The Code-Benders' for our cohort name?") do |menu|
+      menu.choice "Patrick", 2
+      menu.choice "Samantha", 4
+      menu.choice "Franklin", 3
+      menu.choice "Jade", 1
+    end
+    @@answer_total << answer_six
+  end
 
-#   def question_seven
-#     prompt = TTY::Prompt.new
-#     answer_seven = prompt.select("Who gave up their life to restore the bridge of Yin and Yang in the spirit and physical world?") do |menu|
-#       menu.choice "Sokka", 0
-#       menu.choice "Taaluk", 0
-#       menu.choice "Queen Leigh", 0
-#       menu.choice "Princess Yue", 1
-#     end
-#     @@answer_total << answer_seven
-#   end
+  def question_seven
+    prompt = TTY::Prompt.new
+    answer_seven = prompt.select("Who gave up their life to restore the bridge of Yin and Yang in the spirit and physical world?") do |menu|
+      menu.choice "Sokka", 0
+      menu.choice "Taaluk", 0
+      menu.choice "Queen Leigh", 0
+      menu.choice "Princess Yue", 1
+    end
+    @@answer_total << answer_seven
+  end
 
-#   def question_eight
-#     prompt = TTY::Prompt.new
-#     answer_eight = prompt.select("Who is a firebender?") do |menu|
-#       menu.choice "Bumi", 0
-#       menu.choice "Appa", 0
-#       menu.choice "Mai", 1
-#       menu.choice "Pipsqueak", 0
-#     end
-#     @@answer_total << answer_eight
-#   end
+  def question_eight
+    prompt = TTY::Prompt.new
+    answer_eight = prompt.select("Who is a firebender?") do |menu|
+      menu.choice "Bumi", 0
+      menu.choice "Appa", 0
+      menu.choice "Mai", 1
+      menu.choice "Pipsqueak", 0
+    end
+    @@answer_total << answer_eight
+  end
 
-#   def question_nine
-#     prompt = TTY::Prompt.new
-#     answer_nine = prompt.select("What is the official game of The Code-benders?") do |menu|
-#       menu.choice "Procrastination", 1
-#       menu.choice "Animator", 4
-#       menu.choice "Fartnite", 3
-#       menu.choice "Learn IDE", 2
-#     end
-#     @@answer_total << answer_nine
-#   end
+  def question_nine
+    prompt = TTY::Prompt.new
+    answer_nine = prompt.select("What is the official game of The Code-benders?") do |menu|
+      menu.choice "Procrastination", 1
+      menu.choice "Animator", 4
+      menu.choice "Fartnite", 3
+      menu.choice "Learn IDE", 2
+    end
+    @@answer_total << answer_nine
+  end
 
-#   def question_ten
-#     prompt = TTY::Prompt.new
-#     answer_ten = prompt.select("Who is an airbender?") do |menu|
-#       menu.choice "Tarlock", 0
-#       menu.choice "Tenzin", 1
-#       menu.choice "Sokka", 0
-#       menu.choice "Meng", 0
-#     end
-#     @@answer_total << answer_ten
-#   end
+  def question_ten
+    prompt = TTY::Prompt.new
+    answer_ten = prompt.select("Who is an airbender?") do |menu|
+      menu.choice "Tarlock", 0
+      menu.choice "Tenzin", 1
+      menu.choice "Sokka", 0
+      menu.choice "Meng", 0
+    end
+    @@answer_total << answer_ten
+  end
 
-#   def question_eleven
-#     prompt = TTY::Prompt.new
-#     answer_eleven = prompt.select("Who is a White Lotus Official?") do |menu|
-#       menu.choice "Zuko", 0
-#       menu.choice "Momo", 0
-#       menu.choice "Iroh", 1
-#       menu.choice "Aang", 0
-#     end
-#     @@answer_total << answer_eleven
-#   end
+  def question_eleven
+    prompt = TTY::Prompt.new
+    answer_eleven = prompt.select("Who is a White Lotus Official?") do |menu|
+      menu.choice "Zuko", 0
+      menu.choice "Momo", 0
+      menu.choice "Iroh", 1
+      menu.choice "Aang", 0
+    end
+    @@answer_total << answer_eleven
+  end
 
-#   def question_twelve
-#     prompt = TTY::Prompt.new
-#     answer_twelve = prompt.select("Whose nickname in the cohort is Daisy?") do |menu|
-#       menu.choice "Sayana", 3
-#       menu.choice "Kalkidan", 4
-#       menu.choice "Ekaterina", 2
-#       menu.choice "Waverley", 1
-#     end
-#     @@answer_total << answer_twelve
-#   end
+  def question_twelve
+    prompt = TTY::Prompt.new
+    answer_twelve = prompt.select("Whose nickname in the cohort is Daisy?") do |menu|
+      menu.choice "Sayana", 3
+      menu.choice "Kalkidan", 4
+      menu.choice "Ekaterina", 2
+      menu.choice "Waverley", 1
+    end
+    @@answer_total << answer_twelve
+  end
 
-#   def question_thirteen
-#     prompt = TTY::Prompt.new
-#     answer_thirteen = prompt.select("Which Avatar is the immediate successor of Avatar Aang?") do |menu|
-#       menu.choice "Avatar Korra", 1
-#       menu.choice "Avatar Katara", 0
-#       menu.choice "Avatar Kori", 0
-#       menu.choice "Avatar Kuvira", 0
-#     end
-#     @@answer_total << answer_thirteen
-#   end
+  def question_thirteen
+    prompt = TTY::Prompt.new
+    answer_thirteen = prompt.select("Which Avatar is the immediate successor of Avatar Aang?") do |menu|
+      menu.choice "Avatar Korra", 1
+      menu.choice "Avatar Katara", 0
+      menu.choice "Avatar Kori", 0
+      menu.choice "Avatar Kuvira", 0
+    end
+    @@answer_total << answer_thirteen
+  end
 
-#   def question_fourteen
-#     prompt = TTY::Prompt.new
-#     answer_fourteen = prompt.select("What was the significance of Sozin's Comet to the Fire Nation?") do |menu|
-#       menu.choice "It fortified the alliance between all four nations", 0
-#       menu.choice "It led to the discovery of bloodbending", 0
-#       menu.choice "It weakened the Fire Nation and depleted firebending output", 0
-#       menu.choice "It was the catalyst of the war and increased firebending output", 1
-#     end
-#     @@answer_total << answer_fourteen
-#   end
+  def question_fourteen
+    prompt = TTY::Prompt.new
+    answer_fourteen = prompt.select("What was the significance of Sozin's Comet to the Fire Nation?") do |menu|
+      menu.choice "It fortified the alliance between all four nations", 0
+      menu.choice "It led to the discovery of bloodbending", 0
+      menu.choice "It weakened the Fire Nation and depleted firebending output", 0
+      menu.choice "It was the catalyst of the war and increased firebending output", 1
+    end
+    @@answer_total << answer_fourteen
+  end
 
-#   def question_fifteen
-#     prompt = TTY::Prompt.new
-#     answer_fifteen = prompt.select("Do you consider the name Franklin to be exceptionally cool?") do |menu|
-#       menu.choice "Yes", 50
-#       menu.choice "No", 1
-#     end
-#     @@answer_total << answer_fifteen
-#   end
+  def question_fifteen
+    prompt = TTY::Prompt.new
+    answer_fifteen = prompt.select("Do you consider the name Franklin to be exceptionally cool?") do |menu|
+      menu.choice "Yes", 50
+      menu.choice "No", 1
+    end
+    @@answer_total << answer_fifteen
+  end
 
   def assign_avatar
     puts "The Divination Test has determined..."
     sleep 3
-      case @@answer_total.reduce(:+)
+      answers = @@answer_total.reduce(:+)
+      case answers
       when 5
       sozin = Avatar.find_by(name: "Sozin")
       puts "that you are #{sozin.name}, #{sozin.desc}".bold
