@@ -4,13 +4,16 @@ class Interface
 
   @@answer_total = []
 
-  # def run
-  #   # welcome
-  #   # login_or_signup
-  #   # wanna_see_favs?
-  #   # get_joke(what_subject)
-  # end
+  def run
+    create_user
+  end
+  def create_user
+    @@user = User.create(name)
+    #capture the name instance
+    #use that as a variable for to create a new user
+    #invoke questions to begin quiz
 
+  end
   def question_one
     prompt = TTY::Prompt.new
     answer_one = prompt.select("How many Nations exist in The Avatar Series?") do |menu|
@@ -152,6 +155,7 @@ class Interface
       menu.choice "Avatar Kuvira", 0
     end
     @@answer_total << answer_thirteen
+    question_fourteen
   end
 
   def question_fourteen
@@ -163,6 +167,7 @@ class Interface
       menu.choice "It was the catalyst of the war and increased firebending output", 1
     end
     @@answer_total << answer_fourteen
+    question_fifteen
   end
 
   def question_fifteen
@@ -172,6 +177,7 @@ class Interface
       menu.choice "No", 1
     end
     @@answer_total << answer_fifteen
+    assign_avatar
   end
 
   def assign_avatar
@@ -180,88 +186,83 @@ class Interface
       answers = @@answer_total.reduce(:+)
       case answers
       when 5
-      sozin = Avatar.find_by(name: "Sozin")
+      selected_avatar = Avatar.find_by(name: "Sozin")
       puts "that you are #{sozin.name}, #{sozin.desc}".bold
       when 6
       ozai = Avatar.find_by(name:"Ozai")
-      puts "that you are #{ozai.name}, #{ozai.desc}".bold
+      pu
       when 7
       hama = Avatar.find_by(name: "Hama")
-      puts "that you are #{hama.name}, #{hama.desc}".bold
+      pu
       when 8
       momo = Avatar.find_by(name:"Momo")
-      puts "that you are #{momo.name}, #{momo.desc}".bold
+      pu
       when 9
       appa = Avatar.find_by(name: "Appa")
-      puts "that you are #{appa.name}, #{appa.desc}".bold
+      pu
       when 10
       mai = Avatar.find_by(name: "Mai")
-      puts "that you are #{mai.name}, #{mai.desc}".bold
+      
       when 11
       suki = Avatar.find_by(name:"Suki")
-      puts "that you are #{suki.name}, #{suki.desc}".bold 
+      put
       when 12
       june = Avatar.find_by(name: "June")
-      puts "that you are #{june.name}, #{june.desc}".bold  
+      puts
       when 13
       bumi = Avatar.find_by(name: "Bumi")
-      puts "that you are #{bumi.name}, #{bumi.desc}".bold  
+      pu  
       when 14
       sokka = Avatar.find_by(name: "Sokka")
-      puts "that you are #{sokka.name}, #{sokka.desc}".bold  
+      puts  
       when 15
       combustionman = Avatar.find_by(name: "The Combustion Man")
-      puts "that you are #{combustionman.name}, #{combustionman.desc}".bold  
+      puts "that you are #  
       when 16
       kuruk = Avatar.find_by(name: "Kuruk")
-      puts "that you are #{kuruk.name}, #{kuruk.desc}".bold  
+      puts  
       when 17
-      tenzin = Avatar.find_by(name: "Tenzin")
-      puts "that you are #{tenzin.name}, #{tenzin.desc}".bold  
+      tenzin = Avatar.find_by(name: "Tenzin") 
       when 18
       jet = Avatar.find_by(name: "Jet")
-      puts "that you are #{jet.name}, #{jet.desc}".bold  
+        
       when 19
-      gyatso= Avatar.find_by(name: "Gyatso")
-      puts "that you are #{gyatso.name}, #{gyatso.desc}".bold  
+      gyatso= Avatar.find_by(name: "Gyatso") 
       when 20
       korra = Avatar.find_by(name: "Korra")
-      puts "that you are #{korra.name}, #{korra.desc}".bold  
+ 
       when 21
-      zuko = Avatar.find_by(name: "Zuko")
-      puts "that you are #{zuko.name}, #{zuko.desc}".bold  
+      zuko = Avatar.find_by(name: "Zuko") 
       when 22
-      toph = Avatar.find_by(name :"Toph")
-      puts "that you are #{toph.name}, #{toph.desc}".bold  
+      toph = Avatar.find_by(name : "Toph")
       when 23
       azula = Avatar.find_by(name: "Azula")
-      puts "that you are #{azula.name}, #{azula.desc}".bold 
       when 24
       roku = Avatar.find_by(name: "Roku")
-      puts "that you are #{roku.name}, #{roku.desc}".bold  
       when 25
       kyoshi = Avatar.find_by(name: "Kyoshi")
-      puts "that you are #{kyoshi.name}, #{kyoshi.desc}".bold  
       when 26
       iroh = Avatar.find_by(name: "Iroh")
-      puts "that you are #{iroh.name}, #{iroh.desc}".bold  
       when 27
       yangchen = Avatar.find_by(name: "Yangchen")
-      puts "that you are #{yangchen.name}, #{yangchen.desc}".bold  
+      puts "that  
       when 28
       katara = Avatar.find_by(name: "Katara")
-      puts "that you are #{katara.name}, #{katara.desc}".bold  
+      puts "  
       when 29
       aang = Avatar.find_by(name: "Aang")
-      puts "that you are #{aang.name}, #{aang.desc}".bold  
+      pu  
       when 30
       wan = Avatar.find_by(name: "Wan")
-      puts "that you are #{wan.name}, #{wan.desc}".bold  
+        
       when 50..100
       cabbageman = Avatar.find_by(name: "The Cabbage Man")
       puts "that you are #{cabbageman.name}, #{cabbageman.desc}".bold 
     end
+    puts "that you are #{selected_avatar.name}, #{selected_avatar.desc}".bold 
+    Quiz.create(user_id: @@user.id, avatar_id)
   end
+  #once avatar get picked create an instance with Avatar and User Id
 
 end
 
