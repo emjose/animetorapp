@@ -1,5 +1,55 @@
 #comment
 
+# Welcome to the World of Benders! Its been 100 years since the last Avatar has vanished.
+# The Avatar is needed to restore balance amongst the five nations of the World: Air, Water, Earth, Fire, and Code!
+# After the disappearance of the Avatar, the Code Benders launched a full lab attack, 
+# in an effort to spread code around the world.
+# Use this divination test to discover who you are, and
+# build a team of Benders to defeat the labs and restore balance to the World!
+
+
+# 15 questions displayed
+# 10 Avatar Questions (value of 1 each correct answer)
+# 5 Flatiron Questions (value of 1 to 4 each answer)
+# minimum of 5 points to maximum of 30 points
+# Franklin is 0 points / cabbageman resets the score to 0
+
+#cabbageman         0
+#sozin              5 
+#ozai               6
+#hama               7
+#momo               8
+#appa               9
+#mai                10
+#suki               11
+#june               12
+#bumi               13
+#sokka              14
+#combustion_man     15
+#kuruk              16
+#tenzin             17
+#jet                18
+#gyatso             19
+#korra              20
+#zuko               21
+#toph               22
+#azula              23
+#roku               24
+#kyoshi             25
+#iroh               26
+#yangchen           27
+#katara             28
+#aang               29
+#wan                30
+#
+#
+#
+#
+
+
+
+
+
 Plant.destroy_all
 Person.destroy_all
 PlantParenthood.destroy_all
