@@ -1,4 +1,82 @@
+
+
+  question1 = [ "How many Nations exist in The Avatar Series?
+  ", %w(6 2 3 4) ]
+  question2 = ["Where did Sokka and Katara find Aang?", ["Under the ocean", "In A Shipwreck", "In a Ball of Ice", "By his old air Temple"]]
+  question3 = ["Who was the avatar before Aang?", %w( Korra Azula Roku Yengchen
+  )]
+  question4 =["Who was Aang's mentor and Guardian at the air temple?", %w(Ganchu Gyatso Moi-Fei Jeong-jong )]
+  question5 = ["Select the Firebender from below", %w(mai pipsqueak bumi appa)]
+  question6 = ["Select the White Lotus official from below?", %w(Zukko mai Iroh Aang) ]
+  question7 = ["Who was the first avatar", %w(Woohun, wan, Won, Qwon)]
+  question8 = ["How many labs were you able to complete this week?", %w(>20 20-30 31-40 40+ )]
+  question9 = ["How often do you smile when looking at the computer?", ["Not at all since School started",
+     "Never when i'm doing assignments", "Only when i’m doing assignments", "All the Time"]]
+  question10 = ["What is your favourite part about the school day", %w(Ending! Stand-downs/Feelings Lectures Labs)]
+  question11 = ["What is the Official Game of the Code-benders?", %w(Animator Fartnite Learn-IDE Procrastination	)]
+  question12 = ["Who were the first earthbenders?", %w( The-dragons Toph-ancestors The-BadgerMoles Avatar-Kyoshi
+  )]
+  question13 = ["Who was the instructor that left shortly after we started", %w(Mike Sylwia Larry Jack)]
+  question14 = ["What thought Aang how to energy-bend?", %w(Twin-Dragon Great-Owl Iron-turtle Lion-Turtle	)]
+  question15 = ["Who gave up their life to restore the bridge of Ying and Yan In the spirit and physical world?"
+, %w(Sokka Taaluk Princess-Yue	Queen-Leigh)]
+
+
+
+
+
+
 #comment
+
+#  Welcome to the World of Benders! Its been 100 years since the last Avatar has vanished.
+#  The Avatar is needed to restore balance amongst the five nations of the World: Air, Water, Earth, Fire, and Code!
+#  After the disappearance of the Avatar, the Code Benders launched a full lab attack, 
+#  in an effort to spread code around the world.
+#  Use this divination test to discover who you are, and
+#  build a team of Benders to defeat the labs and restore balance to the World!
+
+
+# 15 questions displayed
+# 10 Avatar Questions (value of 1 each correct answer)
+# 5 Flatiron Questions (value of 1 to 4 each answer)
+# minimum of 5 points to maximum of 30 points
+# Franklin is 0 points / cabbageman resets the score to 0
+
+#cabbageman         0
+#sozin              5 
+#ozai               6
+#hama               7
+#momo               8
+#appa               9
+#mai                10
+#suki               11
+#june               12
+#bumi               13
+#sokka              14
+#combustion_man     15
+#kuruk              16
+#tenzin             17
+#jet                18
+#gyatso             19
+#korra              20
+#zuko               21
+#toph               22
+#azula              23
+#roku               24
+#kyoshi             25
+#iroh               26
+#yangchen           27
+#katara             28
+#aang               29
+#wan                30
+#
+#
+#
+#
+
+
+
+
 
 Plant.destroy_all
 Person.destroy_all
