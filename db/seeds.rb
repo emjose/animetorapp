@@ -1,57 +1,4 @@
-#Avatar Characters
-cabbageman = Avatar.create(avatar_id: “The Cabbage Man! Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.”)
-
-sozin = Avatar.create(avatar_id: “Sozin, the intelligent yet ruthless Fire Lord and instigator of the Hundred Year War.”)
-
-ozai = Avatar.create(avatar_id: “Ozai, the strong and power-hungry ruler of the Fire Nation with an almost unmatchable mastery of bending fire.”)
-
-hama = Avatar.create(avatar_id: “Hama, a seemingly gentle and kind old woman, but you harbor a dark skill of bending blood to you will.”)
-
-momo = Avatar.create(avatar_id: “Momo, the winged lemur companion of Avatar Aang. You are curious, playful, intelligent, and most of all, loyal.”)
-
-appa = Avatar.create(avatar_id: “Appa, the loyal and trusted Sky bison of Avatar Aang. Despite numerous obstacles, you persevere and rise to the occasion.”)
-
-mai = Avatar.create(avatar_id: “Mai, a master markswoman of knives and arrows. You are outwardly stoic and brooding, but you are flowing with compassion and mercy.”)
-
-suki = Avatar.create(avatar_id: “Suki, a woman of action who excels in hand-to-hand combat. You are a fast learner and possess a strong sense of duty.”)
-
-june = Avatar.create(avatar_id: “June, an exceptional bounty hunter with a sarcastic wit. You have no allegiance to anyone, except for the highest bidder of your services.”)
-
-bumi = Avatar.create(avatar_id: “Bumi, the rambunctious son of Avatar Aang. You are at times reckless, but you always have the best interests of your loved ones.”)
-
-sokka = Avatar.create(avatar_id: “Sokka, the skeptical and abrasive brother of Katara. You learn to be flexible over time, and you have no shortage of loyalty.”
-
-combustionman = Avatar.create(avatar_id: “The Combustion Man, a masterful and silent fire-bending assassin with a unique ability to detonate large explosions from your third-eye tattoo.”)
-
-kuruk = Avatar.create(avatar_id: “Kuruk, the Water Tribe-born Avatar. At times you are your own worst enemy, but you are widely loved by your friends and family.
-
-tenzin = Avatar.create(avatar_id: “Tenzin, the youngest son of Avatar Aang. You are an airbending master and stern in nature, but a sense of humor does slip through at times.”
-
-jet = Avatar.create(avatar_id: “Jet, the young leader of the Earth Kingdom Freedom Fighters. Although you are fueled by revenge, you have a magnetic, charismatic personality.”)
-
-gyatso = Avatar.create(avatar_id: “Gyatso, the kind, wise mentor of Avatar Aang. You are excellent at airbending and you balance you wisdom with a great sense of humor.”)
-
-korra = Avatar.create(avatar_id: “Korra, the immediate successor of Avatar Aang. Extremelly powerful at bending all elements, you are fierce and possess strong loyalty towards your loved ones and duty as the Avatar.”)
-
-zuko = Avatar.create(avatar_id: “Zuko, the prodigal son of Fire Lord Ozai. Despite internal struggle and turmoil, you are driven by hope and achieve great wisdom.”)
-
-toph = Avatar.create(avatar_id: “Toph, a powerful, earthbending master. Your visual impairment is of no hindrance, and you are confident, honest, and full of no-nonsense.”)
-
-azula = Avatar.create(avatar_id: “Azula, a firebending prodigy and sister of Zuko. At times lacking empathy, you overcome your insecurities and discover a strong sense of self.”)
-
-roku = Avatar.create(avatar_id: “Roku, the wise Fire Nation-born Avatar. You are self-critica and regretfull, but you are warm-hearted, disciplined, and wise.”)
-
-kyoshi = Avatar.create(avatar_id: “Kyoshi, the Earth Kingdom-born Avatar. You are a merciless pursuer of justice, and you have a far-reaching legacy of fear and admiration.”)
-
-iroh = Avatar.create(avatar_id: “Iroh, a retired Fire Nation General and compassionate uncle of Zuko. You are wise, easygoing, and you live life to the fullest.”
-
-yangchen = Avatar.create(avatar_id: “Yangchen, the Air Nomad Avatar before Aang. You are an encouraging and empathetic leader, and you are known for your great compassion.”)
-
-katara = Avatar.create(avatar_id: “Katara, a waterbending master. You are compassionate, and your inner strength drives your determination to fight for your loved ones.”)
-
-aang = Avatar.create(avatar_id: “Aang, the Air Nomad Avatar. As a reluctant hero, you are somewhat naïve and carefree, but you rise to the duty as the Avatar to bring peace to the World of the Benders.”)
-
-wan = Avatar.create(avatar_id: “Wan, the very first Avatar. You are initially reckless and temperamental, but only because you feel that others are being treated unjustly. You are humble, brave, and achieve full mastery of Air, Water, Earth, and Fire!
+# 1. for each instance in the seed file, Model.
 
 Avatar.destroy_all
 Quiz.destroy_all
@@ -59,6 +6,120 @@ User.destroy_all
 Avatar.reset_pk_sequence
 Quiz.reset_pk_sequence
 User.reset_pk_sequence
+
+# 2. keep avatar instances in the seed file, use Avatar.find_by()
+
+
+
+#Avatar Characters
+# sozin = Avatar.create(avatar_id: “Sozin, the intelligent yet ruthless Fire Lord and instigator of the Hundred Year War.”)
+sozin = Avatar.create(name: "Sozin", desc: "the intelligent yet ruthless Fire Lord and instigator of the Hundred Year War.") 
+# sozin_id = Avatar.find_by(name: "Sozin").id
+
+# ozai = Avatar.create(avatar_id: “Ozai, the strong and power-hungry ruler of the Fire Nation with an almost unmatchable mastery of firebending.”)
+ozai = Avatar.create(name: "Ozai", desc: "the strong and power-hungry ruler of the Fire Nation with an almost unmatchable mastery of firebending.")
+# ozai_id = Avatar.find_by(name: "Ozai").id
+
+# hama = Avatar.create(avatar_id: “Hama, a seemingly gentle and kind old woman, but you harbor a dark skill of bending blood to your will.”)
+hama = Avatar.create(name: "Hama", desc: "a seemingly gentle and kind old woman, but you harbor a dark skill of bending blood to your will.")
+# hama_id = Avatar.find_by(name: "Hama").id
+
+# momo = Avatar.create(avatar_id: “Momo, the winged lemur companion of Avatar Aang. You are curious, playful, intelligent, and most of all, loyal.”)
+momo = Avatar.create(name: "Momo", desc: "the winged lemur companion of Avatar Aang. You are curious, playful, intelligent, and most of all, loyal.")
+#momo_id = Avatar.find_by(name: "Momo")
+
+# appa = Avatar.create(avatar_id: “Appa, the loyal and trusted Sky bison of Avatar Aang. Despite numerous obstacles, you persevere and rise to the occasion.”)
+appa = Avatar.create(name: "Appa", desc: "the loyal and trusted Sky bison of Avatar Aang. Despite numerous obstacles, you persevere and rise to the occasion.")
+# appa_id = Avatar.find_by(name: "Appa")
+
+# mai = Avatar.create(avatar_id: “Mai, a master markswoman of knives and arrows. You are outwardly stoic and brooding, but you are flowing with compassion and mercy.”)
+mai = Avatar.create(name: "Mai", desc: "a master markswoman of knives and arrows. You are outwardly stoic and brooding, but you are flowing with compassion and mercy.")
+# mai_id = Avatar.find_by(name: "Mai")
+
+# suki = Avatar.create(avatar_id: “Suki, a woman of action who excels in hand-to-hand combat. You are a fast learner and possess a strong sense of duty.”)
+suki = Avatar.create(name: "Suki", desc: "a woman of action who excels in hand-to-hand combat. You are a fast learner and possess a strong sense of duty.")
+# suki_id = Avatar.find_by(name: "Suki")
+
+# june = Avatar.create(avatar_id: “June, an exceptional bounty hunter with a sarcastic wit. You have no allegiance to anyone, except for the highest bidder of your services.”)
+june = Avatar.create(name: "June", desc: "an exceptional bounty hunter with a sarcastic wit. You have no allegiance to anyone, except for the highest bidder of your services.")
+# june_id = Avatar.find_by(name: "June")
+
+# bumi = Avatar.create(avatar_id: “Bumi, the rambunctious son of Avatar Aang. You are at times reckless, but you always have the best interests of your loved ones.”)
+bumi = Avatar.create(name: "Bumi", desc: "the rambunctious son of Avatar Aang. You are at times reckless, but you always have the best interests of your loved ones.")
+# bumi_id = Avatar.find_by(name: "Bumi")
+
+# sokka = Avatar.create(avatar_id: “Sokka, the skeptical and abrasive brother of Katara. You learn to be flexible over time, and you have no shortage of loyalty.”
+sokka = Avatar.create(name: "Sokka", desc: "the skeptical and abrasive brother of Katara. You learn to be flexible over time, and you have no shortage of loyalty.")
+# sokka_id = Avatar.find_by(name: "Sokka")
+
+# combustionman = Avatar.create(avatar_id: “The Combustion Man, a masterful and silent firebending assassin with a unique ability to detonate large explosions from your third-eye tattoo.”)
+combustionman = Avatar.create(name: "The Combustion Man", desc: "a masterful and silent firebending assassin with a unique ability to detonate large explosions from your third-eye tattoo.")
+# combustionman_id = Avatar.find_by(name: "The Combustion Man")
+
+# kuruk = Avatar.create(avatar_id: “Kuruk, the Water Tribe-born Avatar. At times you are your own worst enemy, but you are widely loved by your friends and family.")
+kuruk = Avatar.create(name: "Kuruk", desc: "the Water Tribe-born Avatar. At times you are your own worst enemy, but you are widely loved by your friends and family.")
+# kuruk_id = Avatar.find_by(name: "Kuruk")
+
+# tenzin = Avatar.create(avatar_id: “Tenzin, the youngest son of Avatar Aang. You are an airbending master and stern in nature, but a sense of humor does slip through at times.”
+tenzin = Avatar.create(name: "Tenzin", desc: "the youngest son of Avatar Aang. You are an airbending master and stern in nature, but a sense of humor does slip through at times.")
+# tenzin_id = Avatar.find_by(name: "Tenzin")
+
+# jet = Avatar.create(avatar_id: “Jet, the young leader of the Earth Kingdom Freedom Fighters. Although you are fueled by revenge, you have a magnetic, charismatic personality.”)
+jet = Avatar.create(name: "Jet", desc:"the young leader of the Earth Kingdom Freedom Fighters. Although you are fueled by revenge, you have a magnetic, charismatic personality.")
+# jet_id = Avatar.find_by(name: "Jet")
+
+# gyatso = Avatar.create(avatar_id: “Gyatso, the kind, wise mentor of Avatar Aang. You are excellent at airbending and you balance your wisdom with a great sense of humor.”)
+gyatso = Avatar.create(name: "Gyatso", desc: "the kind, wise mentor of Avatar Aang. You are excellent at airbending and you balance your wisdom with a great sense of humor.")
+#gyatso_id = Avatar.find_by(name: "Gyatso")
+
+# korra = Avatar.create(avatar_id: “Korra, the immediate successor of Avatar Aang. Extremely powerful at bending all elements, you are fierce and possess strong loyalty towards your loved ones and duty as the Avatar.”)
+korra = Avatar.create(name: "Korra", desc: "the immediate successor of Avatar Aang. Extremely powerful at bending all elements, you are fierce and possess strong loyalty towards your loved ones and duty as the Avatar.")
+# korra_id = Avatar.find_by(name: "Korra")
+
+# zuko = Avatar.create(avatar_id: “Zuko, the prodigal son of Fire Lord Ozai. Despite internal struggle and turmoil, you are driven by hope and achieve great wisdom.”)
+zuko = Avatar.create(name: "Zuko", desc: "the prodigal son of Fire Lord Ozai. Despite internal struggle and turmoil, you are driven by hope and achieve great wisdom.")
+# zuko_id = Avatar.find_by(name: "Zuko")
+
+# toph = Avatar.create(avatar_id: “Toph, a powerful, earthbending master. Your visual impairment is of no hindrance, and you are confident, honest, and full of no-nonsense.”)
+toph = Avatar.create(name: "Toph", desc: "a powerful, earthbending master. Your visual impairment is of no hindrance, and you are confident, honest, and full of no-nonsense.")
+# toph_id = Avatar.find_by(name: "Toph")
+
+# azula = Avatar.create(avatar_id: “Azula, a firebending prodigy and sister of Zuko. At times lacking empathy, you overcome your insecurities and discover a strong sense of self.”)
+azula = Avatar.create(name: "Azula", desc: "a firebending prodigy and sister of Zuko. At times lacking empathy, you overcome your insecurities and discover a strong sense of self.")
+# azula_id = Avatar.find_by(name: "Azula")
+
+# roku = Avatar.create(avatar_id: “Roku, the wise Fire Nation-born Avatar. You are self-critical and regretful, but you are warm-hearted, disciplined, and wise.”)
+roku = Avatar.create(name: "Roku", desc: "the wise Fire Nation-born Avatar. You are self-critical and regretful, but you are warm-hearted, disciplined, and wise.")
+# roku_id = Avatar.find_by(name: "Roku")
+
+# kyoshi = Avatar.create(avatar_id: “Kyoshi, the Earth Kingdom-born Avatar. You are a merciless pursuer of justice, and you have a far-reaching legacy of fear and admiration.”)
+kyoshi = Avatar.create(name: "Kyoshi", desc: "the Earth Kingdom-born Avatar. You are a merciless pursuer of justice, and you have a far-reaching legacy of fear and admiration.")
+# kyoshi_id = Avatar.find_by(name: "Kyoshi")
+
+# iroh = Avatar.create(avatar_id: “Iroh, a retired Fire Nation General and compassionate uncle of Zuko. You are wise, easygoing, and you live life to the fullest.”)
+iroh = Avatar.create(name: "Iroh", desc: "a retired Fire Nation General and compassionate uncle of Zuko. You are wise, easygoing, and you live life to the fullest.")
+# iroh = Avatar.find_by(name: "Iroh")
+
+# yangchen = Avatar.create(avatar_id: “Yangchen, the Air Nomad Avatar before Aang. You are an encouraging and empathetic leader, and you are known for your great compassion.”)
+yangchen = Avatar.create(name: "Yangchen", desc: "the Air Nomad Avatar before Aang. You are an encouraging and empathetic leader, and you are known for your great compassion.")
+#yangchen_id = Avatar.find_by(name: "Yangchen")
+
+# katara = Avatar.create(avatar_id: “Katara, a waterbending master. You are compassionate, and your inner strength drives your determination to fight for your loved ones.”)
+katara = Avatar.create(name: "Katara", desc: "a waterbending master. You are compassionate, and your inner strength drives your determination to fight for your loved ones.")
+# katara_id = Avatar.find_by(name: "Katara")
+
+# aang = Avatar.create(avatar_id: “Aang, the Air Nomad Avatar. As a reluctant hero, you are somewhat naïve and carefree, but you rise to the duty as the Avatar to bring peace to the World of the Benders.”)
+aang = Avatar.create(name: "Aang", desc: "the Air Nomad Avatar. As a reluctant hero, you are somewhat naïve and carefree, but you rise to the duty as the Avatar to bring peace to the World of the Benders.")
+# aang_id = Avatar.find_by(name: "Aang")
+
+# wan = Avatar.create(avatar_id: “Wan, the very first Avatar. You are initially reckless and temperamental, but only because you feel that others are being treated unjustly. You are humble, brave, and achieve full mastery of Air, Water, Earth, and Fire!")
+wan = Avatar.create(name: "Wan", desc: "the very first Avatar. You are initially reckless and temperamental, but only because you feel that others are being treated unjustly. You are humble, brave, and achieve full mastery of Air, Water, Earth, and Fire!")
+# wan_id = Avatar.find_by(name: "Wan")
+
+# cabbageman = Avatar.create(avatar_id: “The Cabbage Man! Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.”)
+cabbageman = Avatar.create(name: "The Cabbage Man", desc: "Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.")
+# cabbageman_id = Avatar.find_by(name: "The Cabbage Man")
+
 
 #Minor Characters as User instances, for method find other users?
 joodee = User.create(name: “Joo Dee”)
@@ -126,28 +187,14 @@ onji = User.create(name: “On Ji”)
 
 
 
-Plant.destroy_all
-Person.destroy_all
-PlantParenthood.destroy_all
-Plant.reset_pk_sequence
-Person.reset_pk_sequence
-PlantParenthood.reset_pk_sequence
+# Plant.destroy_all
+# Person.destroy_all
+# PlantParenthood.destroy_all
+# Plant.reset_pk_sequence
+# Person.reset_pk_sequence
+# PlantParenthood.reset_pk_sequence
 
-########### different ways to write your seeds ############
-
-
-
-
-
-
-
-# 1: save everything to variables (makes it easy to connect models, best for when you want to be intentional about your seeds)
-basil = Plant.create(name: "basil the herb", bought: 20200610, color: "green")
-sylwia = Person.create(name: "Sylwia", free_time: "none", age: 30)
-pp1 = PlantParenthood.create(plant_id: basil.id, person_id: sylwia.id, affection: 1_000_000, favorite?: true)
-
-# 2. Mass create -- in order to connect them later IN SEEDS (not through the app) you'll need to find their id
-## a. by passing an array of hashes:
+# ########### different ways to write your seeds ############
 
 
 
@@ -155,62 +202,76 @@ pp1 = PlantParenthood.create(plant_id: basil.id, person_id: sylwia.id, affection
 
 
 
-Plant.create([
-    {name: "Corn Tree", bought: 20170203, color: "green"},
-    {name: "Prayer plant", bought: 20190815, color: "purple"},
-    {name: "Cactus", bought: 20200110, color: "ugly green"}
-])
-## b. by interating over an array of hashes:
-plants = [{name: "Elephant bush", bought: 20180908, color: "green"},
-    {name: "Photos", bought: 20170910, color: "green"},
-    {name: "Dragon tree", bought: 20170910, color: "green"},
-    {name: "Snake plant", bought: 20170910, color: "dark green"},
-    {name: "polka dot plant", bought: 20170915, color: "pink and green"},
-    {name: "Cactus", bought: 20200517, color: "green"}]
+# # 1: save everything to variables (makes it easy to connect models, best for when you want to be intentional about your seeds)
+# basil = Plant.create(name: "basil the herb", bought: 20200610, color: "green")
+# sylwia = Person.create(name: "Sylwia", free_time: "none", age: 30)
+# pp1 = PlantParenthood.create(plant_id: basil.id, person_id: sylwia.id, affection: 1_000_000, favorite?: true)
 
-plants.each{|hash| Plant.create(hash)}
+# # 2. Mass create -- in order to connect them later IN SEEDS (not through the app) you'll need to find their id
+# ## a. by passing an array of hashes:
 
 
 
 
 
 
-# 3. Use Faker and mass create
-## step 1: write a method that creates a person
-def create_person
-    free = ["mornings", "evenings", "always", "afternoons", "weekends", "none"].sample
 
-    person = Person.create(
-        name: Faker::Movies::HitchhikersGuideToTheGalaxy.character,
-        free_time: free,
-        age: rand(11...70)
-    )
-end
+# Plant.create([
+#     {name: "Corn Tree", bought: 20170203, color: "green"},
+#     {name: "Prayer plant", bought: 20190815, color: "purple"},
+#     {name: "Cactus", bought: 20200110, color: "ugly green"}
+# ])
+# ## b. by interating over an array of hashes:
+# plants = [{name: "Elephant bush", bought: 20180908, color: "green"},
+#     {name: "Photos", bought: 20170910, color: "green"},
+#     {name: "Dragon tree", bought: 20170910, color: "green"},
+#     {name: "Snake plant", bought: 20170910, color: "dark green"},
+#     {name: "polka dot plant", bought: 20170915, color: "pink and green"},
+#     {name: "Cactus", bought: 20200517, color: "green"}]
 
-## step 2: write a method that creates a joiner
-def create_joiners(person)
-    plants_number = rand(1..4)
-    plants_number.times do 
-        PlantParenthood.create(
-            plant_id: Plant.all.sample.id, 
-            person_id: person.id, 
-            affection: rand(101), 
-            favorite?: [true, false].sample
-        )
-    end
-end
-
-## step 3: invoke creating joiners by passing in an instance of a person
-10.times do     
-    create_joiners(create_person)
-    ##### ALTERNATIVE:
-    # person = create_person
-    # create_joiners(person)
-end
-
-indoor = Category.create(name: "indoors")
-
-Plant.update(category_id: indoor.id)
+# plants.each{|hash| Plant.create(hash)}
 
 
-puts "🔥 🔥 🔥 🔥 "
+
+
+
+
+# # 3. Use Faker and mass create
+# ## step 1: write a method that creates a person
+# def create_person
+#     free = ["mornings", "evenings", "always", "afternoons", "weekends", "none"].sample
+
+#     person = Person.create(
+#         name: Faker::Movies::HitchhikersGuideToTheGalaxy.character,
+#         free_time: free,
+#         age: rand(11...70)
+#     )
+# end
+
+# ## step 2: write a method that creates a joiner
+# def create_joiners(person)
+#     plants_number = rand(1..4)
+#     plants_number.times do 
+#         PlantParenthood.create(
+#             plant_id: Plant.all.sample.id, 
+#             person_id: person.id, 
+#             affection: rand(101), 
+#             favorite?: [true, false].sample
+#         )
+#     end
+# end
+
+# ## step 3: invoke creating joiners by passing in an instance of a person
+# 10.times do     
+#     create_joiners(create_person)
+#     ##### ALTERNATIVE:
+#     # person = create_person
+#     # create_joiners(person)
+# end
+
+# indoor = Category.create(name: "indoors")
+
+# Plant.update(category_id: indoor.id)
+
+
+# puts "🔥 🔥 🔥 🔥 "

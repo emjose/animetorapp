@@ -13,7 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_08_18_230047) do
 
   create_table "avatars", force: :cascade do |t|
-    t.string "avatar_id"
+    t.string "name"
+    t.string "desc"
   end
 
   create_table "quizzes", force: :cascade do |t|
