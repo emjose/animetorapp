@@ -257,13 +257,13 @@ class Interface
       when 30
       wan = Avatar.find_by(name: "Wan")
       puts "that you are #{wan.name}, #{wan.desc}".bold  
-      when >= 50
+      when 50..100
       cabbageman = Avatar.find_by(name: "The Cabbage Man")
       puts "that you are #{cabbageman.name}, #{cabbageman.desc}".bold 
     end
   end
 
-
+end
 
 
 #   private
