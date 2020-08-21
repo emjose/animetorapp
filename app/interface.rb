@@ -1,15 +1,32 @@
 class Interface
-  # here will be your CLI!
-  # it is not an AR class so you need to add attr
+
+  attr_accessor :prompt, :user
+
 
   @@answer_total = []
 
-  # def run
-  #   # welcome
-  #   # login_or_signup
-  #   # wanna_see_favs?
-  #   # get_joke(what_subject)
-  # end
+  def initialize
+    @prompt = TTY::Prompt.new
+  end
+
+  def welcome
+    puts " "
+    puts "Welcome to the World of Benders! Its been 100 years since the last Avatar has vanished.."
+    puts " "
+    sleep 4
+    puts "The Avatar is needed to restore balance amongst the five nations of the World: Air, Water, Earth, Fire, and Code!"
+    puts " "
+    sleep 5
+    puts "After the disappearance of the Avatar, the Code Benders were overwhelemd by an unrelenting LAB ATTACK!" 
+    puts " "
+    sleep 4
+    puts "Use this DIVINATION TEST to discover who you are,"
+    puts " "
+    puts "and build a team of Benders to defeat the labs and restore balance to the World!"
+    sleep 6
+
+  end
+ 
 
   def question_one
     prompt = TTY::Prompt.new
@@ -175,98 +192,67 @@ class Interface
   end
 
   def assign_avatar
+    puts " "
     puts "The Divination Test has determined..."
-    sleep 3
+    sleep 2
       answers = @@answer_total.reduce(:+)
       case answers
       when 5
-      sozin = Avatar.find_by(name: "Sozin")
-      puts "that you are #{sozin.name}, #{sozin.desc}".bold
+      selected_avatar = Avatar.find_by(name: "Sozin")
       when 6
-      ozai = Avatar.find_by(name:"Ozai")
-      puts "that you are #{ozai.name}, #{ozai.desc}".bold
+      selected_avatar = Avatar.find_by(name:"Ozai")
       when 7
-      hama = Avatar.find_by(name: "Hama")
-      puts "that you are #{hama.name}, #{hama.desc}".bold
+      selected_avatar = Avatar.find_by(name: "Hama")
       when 8
-      momo = Avatar.find_by(name:"Momo")
-      puts "that you are #{momo.name}, #{momo.desc}".bold
+      selected_avatar = Avatar.find_by(name:"Momo")
       when 9
-      appa = Avatar.find_by(name: "Appa")
-      puts "that you are #{appa.name}, #{appa.desc}".bold
+      selected_avatar = Avatar.find_by(name: "Appa")
       when 10
-      mai = Avatar.find_by(name: "Mai")
-      puts "that you are #{mai.name}, #{mai.desc}".bold
+      selected_avatar = Avatar.find_by(name: "Mai")
       when 11
-      suki = Avatar.find_by(name:"Suki")
-      puts "that you are #{suki.name}, #{suki.desc}".bold 
+      selected_avatar = Avatar.find_by(name:"Suki")
       when 12
-      june = Avatar.find_by(name: "June")
-      puts "that you are #{june.name}, #{june.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "June") 
       when 13
-      bumi = Avatar.find_by(name: "Bumi")
-      puts "that you are #{bumi.name}, #{bumi.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Bumi") 
       when 14
-      sokka = Avatar.find_by(name: "Sokka")
-      puts "that you are #{sokka.name}, #{sokka.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Sokka") 
       when 15
-      combustionman = Avatar.find_by(name: "The Combustion Man")
-      puts "that you are #{combustionman.name}, #{combustionman.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "The Combustion Man") 
       when 16
-      kuruk = Avatar.find_by(name: "Kuruk")
-      puts "that you are #{kuruk.name}, #{kuruk.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Kuruk") 
       when 17
-      tenzin = Avatar.find_by(name: "Tenzin")
-      puts "that you are #{tenzin.name}, #{tenzin.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Tenzin") 
       when 18
-      jet = Avatar.find_by(name: "Jet")
-      puts "that you are #{jet.name}, #{jet.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Jet") 
       when 19
-      gyatso= Avatar.find_by(name: "Gyatso")
-      puts "that you are #{gyatso.name}, #{gyatso.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Gyatso") 
       when 20
-      korra = Avatar.find_by(name: "Korra")
-      puts "that you are #{korra.name}, #{korra.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Korra")
       when 21
-      zuko = Avatar.find_by(name: "Zuko")
-      puts "that you are #{zuko.name}, #{zuko.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Zuko")
       when 22
-      toph = Avatar.find_by(name :"Toph")
-      puts "that you are #{toph.name}, #{toph.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Toph") 
       when 23
-      azula = Avatar.find_by(name: "Azula")
-      puts "that you are #{azula.name}, #{azula.desc}".bold 
+      selected_avatar = Avatar.find_by(name: "Azula")
       when 24
-      roku = Avatar.find_by(name: "Roku")
-      puts "that you are #{roku.name}, #{roku.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Roku")
       when 25
-      kyoshi = Avatar.find_by(name: "Kyoshi")
-      puts "that you are #{kyoshi.name}, #{kyoshi.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Kyoshi")
       when 26
-      iroh = Avatar.find_by(name: "Iroh")
-      puts "that you are #{iroh.name}, #{iroh.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Iroh")
       when 27
-      yangchen = Avatar.find_by(name: "Yangchen")
-      puts "that you are #{yangchen.name}, #{yangchen.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Yangchen")
       when 28
-      katara = Avatar.find_by(name: "Katara")
-      puts "that you are #{katara.name}, #{katara.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Katara")
       when 29
-      aang = Avatar.find_by(name: "Aang")
-      puts "that you are #{aang.name}, #{aang.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Aang")
       when 30
-      wan = Avatar.find_by(name: "Wan")
-      puts "that you are #{wan.name}, #{wan.desc}".bold  
+      selected_avatar = Avatar.find_by(name: "Wan") 
       when 50..100
-      cabbageman = Avatar.find_by(name: "The Cabbage Man")
-      puts "that you are #{cabbageman.name}, #{cabbageman.desc}".bold 
+      selected_avatar = Avatar.find_by(name: "The Cabbage Man")
     end
-  end
-
-end
-
-
-#   private
-
-  
-# end
+    puts " "
+    puts "that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
+    end
+end 
