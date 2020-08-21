@@ -250,7 +250,7 @@ class Interface
         when 30
         selected_avatar = Avatar.find_by(name: "Wan") 
         when 50..100
-        selected_avatar = Avatar.find_by(name: "The Cabbage Man")
+        selected_avatar = Avatar.find_by(name: "The Cabbage Man!")
       end
       puts " "
       puts "...that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
