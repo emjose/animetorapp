@@ -330,8 +330,8 @@ class Interface
         selected_avatar = Avatar.find_by(name: "Aang")
         when 30
         selected_avatar = Avatar.find_by(name: "Wan") 
-        when answer > 50
-        selected_avatar = Avatar.find_by(name: "The Cabbage Man!")
+        when 50..100
+        selected_avatar = Avatar.find_by(name: "The Cabbage Man")
       end
       if @@avatar.length < 1
          @@avatar << selected_avatar
@@ -364,7 +364,7 @@ class Interface
 
       if answer < 9
       puts (congrats1)
-      elsif answer > 9 || answer < 15
+      elsif answer > 9 && answer < 15
       puts (congrats2)
       elsif answer > 15
       puts (congrats3)
@@ -389,7 +389,7 @@ class Interface
 
     end
 
-    def display_avatar      #need to get this displaying all the relevant avatars to the user
+    def display_avatars      #need to get this displaying all the relevant avatars to the user
        avatar = @@all_avatars
        avatar[0].name
        sleep 6
