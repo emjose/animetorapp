@@ -115,9 +115,8 @@ wan = Avatar.create(name: "Wan", desc: "the very first Avatar. You are initially
 # wan_id = Avatar.find_by(name: "Wan").id
 
 # cabbageman = Avatar.create(avatar_id: “The Cabbage Man! Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.”)
-cabbageman = Avatar.create(name: "The Cabbage Man!", desc: "Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.")
-# cabbageman_id = Avatar.find_by(name: "The Cabbage Man").id
-
+cabbageman = Avatar.create(name: "The Cabbage Man", desc: "Also known as the cabbage merchant, you are constantly plagued by the misfortune of having your cabbage cart continually destroyed.")
+#cabbageman_id = Avatar.find_by(name: "The Cabbage Man").id
 
 
 #Minor Characters as User instances, for method find other users?

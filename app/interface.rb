@@ -1,34 +1,88 @@
 class Interface
-
+  require 'colorize'
   attr_accessor :prompt, :user
 
 
+  @@avatar = []
+  @@all_avatars = []
   @@answer_total = []
+  # def answer_reset
+  #   answer = @@answer_total.reduce(:+)
+  #   if answer > 42 
+  #     @@answer_total = 0
+  #   end
+  # end
 
     def initialize
       @prompt = TTY::Prompt.new
     end
 
-    def welcome
-      puts " "
-      puts "Welcome to the World of Benders! Its been 100 years since the last AVATAR has vanished.."
-      puts " "
-      sleep 4
-      puts "The Avatar is needed to restore balance amongst the five nations of the World: Air, Water, Earth, Fire, and CODE!"
-      puts " "
-      sleep 5
-      puts "After the disappearance of the Avatar, the Code Benders were overwhelemd by an unrelenting LAB ATTACK!"
-      puts " "
-      sleep 4
-      puts "Use this DIVINATION TEST to discover who you are,"
-      puts " "
-      puts "and build a team of BENDERS to defeat the labs and restore balance to the World!"
-      sleep 6
+  def welcome
+    system("clear")
+    puts " "
+    puts "Welcome to the World of Benders! Its been 100 years since the last AVATAR has vanished.."
+    puts "( 。・_・。)人(。・_・。 )(づ｡◕‿‿◕｡)🌬🌬🌬🌬🌬🌬🌬🌬づ(づ｡◕‿‿◕｡)づ( 。・_・。)人(。・_・。 ) 
+    "
+    sleep 4
+    puts "The Avatar is needed to restore balance amongst the five nations of the World: Air, Water, Earth, Fire, and CODE!"
+    puts " 🔥🔥🔥🌪🌪🌊🌊🌍🌎🔥🔥🔥🌪🌪🌊🌊🌍🌎🔥🔥🔥🌪🌪🌊🌊🌍🌎🔥🔥🔥🌪🌪🌊🌊🌍🌎  "
+    sleep 5
+    puts "After the disappearance of the Avatar, the Code Benders were overwhelemd by an unrelenting LAB ATTACK!"
+    puts "  "
+    sleep 4
+    puts "Use this DIVINATION TEST to discover who you are,"
+    puts "
+    ⊂_ヽ
+　 ＼＼ ＿
+　　 ＼(　•_•) ᶠ
+　　　 <　⌒ヽ ᴬ
+　　　/ 　 へ＼ ᴮ
+　　 /　　/　＼＼ ᵁ
+　　 ﾚ　ノ　　 ヽ_つ ᴸ
+　　/　/ ᴼ
+　 /　/| ᵁ
+　(　(ヽ ˢ
+　|　|、＼
+　| 丿 ＼ ⌒)
+　| |　　) /
+`ノ )　 ᴸﾉ
+(_／
+
+"
+    puts "and build a team of BENDERS to defeat the labs and restore balance to the World!"
+    sleep 6
+  end
+
+  def down_ask(str)
+    prompt.ask(str)#.downcase
+   end
+   def yes_no(question_str)
+    prompt.yes?(question_str) do |q|
+    q.suffix "YES! /No Let the war continue"
+    q.positive "Yes Lets End This War!"
+    q.negative "No I Want the Fire 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥Nation to win"
     end
- 
+  end
+  def login
+    username = down_ask("
+    Before we can figure out what roll you must play in ending the upcoming war, 
+    we have to first find out who you were in your past life,
+    Quickly enter Your name we must have it to link to your past and know who you were
+    __________".blue)
+    @user = User.create(name: username)
+  end
 
+  def display_login
+    if @user.name
+    puts "#{@user.name.capitalize} Complete the test to see your faith"
+    else
+      sleep 8
+      login
+    end
+    sleep 4
+  end
 
-    def question_one
+  def question_one
       prompt = TTY::Prompt.new
       answer_one = prompt.select("How many nations exist in the Avatar series?".bold.colorize(:green)) do |menu|
         menu.choice "Six", 0
@@ -37,6 +91,8 @@ class Interface
         menu.choice "Two", 0
       end
       @@answer_total << answer_one
+      system("clear")
+      question_two
     end
 
     def question_two
@@ -48,6 +104,8 @@ class Interface
         menu.choice "Inside an abandoned temple", 0
       end
       @@answer_total << answer_two
+      system("clear")
+      question_three
     end
 
     def question_three
@@ -59,6 +117,8 @@ class Interface
         menu.choice "40 or more", 4
       end
       @@answer_total << answer_three
+      system("clear")
+      question_four
     end
 
     def question_four
@@ -70,6 +130,8 @@ class Interface
         menu.choice "Avatar Kyoshi", 0
       end
       @@answer_total << answer_four
+      system("clear")
+      question_five
     end
 
     def question_five
@@ -81,6 +143,8 @@ class Interface
         menu.choice "Avatar Rangi", 0
       end
       @@answer_total << answer_five
+      system("clear")
+      question_six
     end
 
     def question_six
@@ -92,6 +156,8 @@ class Interface
         menu.choice "Jade", 1
       end
       @@answer_total << answer_six
+      system("clear")
+      question_seven
     end
 
     def question_seven
@@ -103,6 +169,8 @@ class Interface
         menu.choice "Princess Yue", 1
       end
       @@answer_total << answer_seven
+      system("clear")
+      question_eight
     end
 
     def question_eight
@@ -114,6 +182,8 @@ class Interface
         menu.choice "Pipsqueak", 0
       end
       @@answer_total << answer_eight
+      system("clear")
+      question_nine
     end
 
     def question_nine
@@ -125,6 +195,8 @@ class Interface
         menu.choice "Learn IDE", 2
       end
       @@answer_total << answer_nine
+      system("clear")
+      question_ten
     end
 
     def question_ten
@@ -136,6 +208,8 @@ class Interface
         menu.choice "Meng", 0
       end
       @@answer_total << answer_ten
+      system("clear")
+      question_eleven
     end
 
     def question_eleven
@@ -147,6 +221,8 @@ class Interface
         menu.choice "Aang", 0
       end
       @@answer_total << answer_eleven
+      system("clear")
+      question_twelve
     end
 
     def question_twelve
@@ -158,6 +234,8 @@ class Interface
         menu.choice "Waverley", 1
       end
       @@answer_total << answer_twelve
+      system("clear")
+      question_thirteen
     end
 
     def question_thirteen
@@ -169,6 +247,8 @@ class Interface
         menu.choice "Avatar Kuvira", 0
       end
       @@answer_total << answer_thirteen
+      system("clear")
+      question_fourteen
     end
 
     def question_fourteen
@@ -180,6 +260,8 @@ class Interface
         menu.choice "It was the catalyst of the war and increased firebending output", 1
       end
       @@answer_total << answer_fourteen
+      system("clear")
+      question_fifteen
     end
 
     def question_fifteen
@@ -250,12 +332,85 @@ class Interface
         when 30
         selected_avatar = Avatar.find_by(name: "Wan") 
         when 50..100
-        selected_avatar = Avatar.find_by(name: "The Cabbage Man!")
+        selected_avatar = Avatar.find_by(name: "The Cabbage Man")
       end
+      if @@avatar.length < 1
+         @@avatar << selected_avatar
+      end
+      @@all_avatars << selected_avatar
       puts " "
-      puts "...that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
+      # puts "...that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
       puts " "
       puts " "
-    end
-end
 
+    end
+    def congratulations
+      answer = @@answer_total.reduce(:+)
+      selected_avatar = @@avatar[0]
+      congrats1 = "#{@user.name.capitalize} You will not be the strongest ally to rely on in the battle 
+      to end the hundred year war, but faith has chosen you to be #{selected_avatar.name}, 
+      even though #{selected_avatar.desc}.
+      Now do you wish to join a team to help in the battle to restore restore peace!?".blue
+  
+     congrats2 = " #{@user.name.capitalize} The strenght you have displayed before will not compare to what you 
+     will accomplish now as #{selected_avatar.name} you will be an invaluable ally
+     for #{selected_avatar.desc}.
+     We are really close to ending the war! 
+     continue building your team to see who you meet!".blue
+  
+     congrats3 = " #{@user.name.capitalize} You're the one we need to end the War,
+     The Time has finally arrived,
+     100 years passed, but now #{selected_avatar.name} 
+     is here and will valiently apply your skills to end the war for 
+     #{selected_avatar.desc}, only you can save the World ".green
+
+     congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man #{selected_avatar.desc}
+    But don't worry you're safe in our Repo!"
+
+      if answer < 9
+      puts (congrats1)
+      elsif answer > 9 && answer < 15
+      puts (congrats2)
+      elsif answer > 15 && answer < 35
+      puts (congrats3)
+      elsif answer > 50
+      puts (congrats4)
+
+      sleep 10
+      end
+
+
+    congrats1 = "#{@user.name.capitalize} You will not be the strongest ally to rely on in the fight to end the hundred year war,
+    but faith has chosen you to be #{selected_avatar.name}, even though #{selected_avatar.desc}. 
+    Now do you wish to join a team tohelp in the battle to restore restore peace!?"
+
+   congrats2 = " #{@user.name.capitalize} The strenght you have displayed before will not compare to what you 
+   will accomplish now as #{selected_avatar.name} you will be an invaluable ally for #{selected_avatar.desc}.
+   We are really close to ending the war, continue building your team to see who you meet!"
+
+   congrats3 = " #{@user.name.capitalize} you The who need to end the War has finally arrived, 100 years passed, but now #{selected_avatar.name} 
+   is here and will valiently
+   apply his skills to end the war for #{selected_avatar.desc}, only you can save the World  "
+
+   congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man 
+   #{selected_avatar.desc}
+    But don't worry you're safe in our Repo!"
+    end
+
+    # def display_avatars      #need to get this displaying all the relevant avatars to the user
+    #    avatar = @@all_avatars
+    #    avatar[0].name
+    #    sleep 6
+    # end 
+
+    def try_again
+      @@answer_total = []
+      system("clear")
+      answer = yes_no("Take the quiz again and see which other Heroes will aid you in your quest")
+      return question_one if answer
+    end
+
+
+
+
+end
