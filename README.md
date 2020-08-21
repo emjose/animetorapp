@@ -2,9 +2,15 @@
 
 The Anime-Tor App is a CLI-based app inspired by the animated Nickelodeon TV show Avatar: The Last Airbender.
 
-The user is presented with a divination personality test to determine which reincarnations (Avatar characters) they are most similar to.
+The user is presented with a "Divination Test," consisting of a mixture of Avatar triva and questions relevant to Flatiron School students.
+
+The results of this test determine which reincarnations (Avatar characters) they are most similar to.
 
 Once a user has been matched to an Avatar character, the user has the options of collecting more reincarnations by retaking the quiz, viewing more results, and deleting any previous reincarnations.
+
+# Domain-Modeling
+
+User ---< Quiz >--- Avatar
 
 ***
 ## Getting Started
@@ -34,7 +40,7 @@ Jade Decordova
 
 Emmanuel Jose
 
-<!-- Special Thank You to Franklin Bado for his Avatar knowledge and expertise. -->
+Special Thank You to Franklin Bado for his Avatar knowledge and expertise.
 
 ## Resources
 

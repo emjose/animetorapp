@@ -11,7 +11,7 @@ class Interface
 
     def welcome
       puts " "
-      puts "Welcome to the World of Benders! Its been 100 years since the last Avatar has vanished.."
+      puts "Welcome to the World of Benders! Its been 100 years since the last AVATAR has vanished.."
       puts " "
       sleep 4
       puts "The Avatar is needed to restore balance amongst the five nations of the World: Air, Water, Earth, Fire, and CODE!"
@@ -22,7 +22,7 @@ class Interface
       sleep 4
       puts "Use this DIVINATION TEST to discover who you are,"
       puts " "
-      puts "and build a team of Benders to defeat the labs and restore balance to the World!"
+      puts "and build a team of BENDERS to defeat the labs and restore balance to the World!"
       sleep 6
     end
  
@@ -250,7 +250,7 @@ class Interface
         when 30
         selected_avatar = Avatar.find_by(name: "Wan") 
         when 50..100
-        selected_avatar = Avatar.find_by(name: "The Cabbage Man")
+        selected_avatar = Avatar.find_by(name: "The Cabbage Man!")
       end
       puts " "
       puts "...that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
