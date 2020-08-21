@@ -18,6 +18,7 @@ class Interface
     end
 
   def welcome
+    system("clear")
     puts " "
     puts "Welcome to the World of Benders! Its been 100 years since the last AVATAR has vanished.."
     puts "( 。・_・。)人(。・_・。 )(づ｡◕‿‿◕｡)🌬🌬🌬🌬🌬🌬🌬🌬づ(づ｡◕‿‿◕｡)づ( 。・_・。)人(。・_・。 ) 
@@ -357,19 +358,23 @@ class Interface
      We are really close to ending the war! 
      continue building your team to see who you meet!".blue
   
-     congrats3 = " #{@user.name.capitalize} you The who need to end the War has finally arrived,
+     congrats3 = " #{@user.name.capitalize} You're the one we need to end the War,
+     The Time has finally arrived,
      100 years passed, but now #{selected_avatar.name} 
      is here and will valiently apply your skills to end the war for 
      #{selected_avatar.desc}, only you can save the World ".green
+
+     congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man #{selected_avatar.desc}
+    But don't worry you're safe in our Repo!"
 
       if answer < 9
       puts (congrats1)
       elsif answer > 9 && answer < 15
       puts (congrats2)
-      elsif answer > 15
+      elsif answer > 15 && answer < 35
       puts (congrats3)
       elsif answer > 50
-      puts "Your the cabbage man"
+      puts (congrats4)
 
       sleep 10
       end
@@ -387,6 +392,9 @@ class Interface
    is here and will valiently
    apply his skills to end the war for #{selected_avatar.desc}, only you can save the World  "
 
+   congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man 
+   #{selected_avatar.desc}
+    But don't worry you're safe in our Repo!"
     end
 
     def display_avatars      #need to get this displaying all the relevant avatars to the user
