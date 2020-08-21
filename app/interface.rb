@@ -5,6 +5,7 @@ class Interface
 
   @@answer_total = []
 
+<<<<<<< HEAD
   def initialize
     @prompt = TTY::Prompt.new
   end
@@ -27,7 +28,18 @@ class Interface
 
   end
  
+=======
+  def run
+    create_user
+  end
+  def create_user
+    @@user = User.create(name)
+    #capture the name instance
+    #use that as a variable for to create a new user
+    #invoke questions to begin quiz
+>>>>>>> 09e4c3c11035a641cef5b4dc004f8f34a0adb0ed
 
+  end
   def question_one
     prompt = TTY::Prompt.new
     answer_one = prompt.select("How many Nations exist in The Avatar Series?") do |menu|
@@ -169,6 +181,7 @@ class Interface
       menu.choice "Avatar Kuvira", 0
     end
     @@answer_total << answer_thirteen
+    question_fourteen
   end
 
   def question_fourteen
@@ -180,6 +193,7 @@ class Interface
       menu.choice "It was the catalyst of the war and increased firebending output", 1
     end
     @@answer_total << answer_fourteen
+    question_fifteen
   end
 
   def question_fifteen
@@ -189,6 +203,7 @@ class Interface
       menu.choice "No", 1
     end
     @@answer_total << answer_fifteen
+    assign_avatar
   end
 
   def assign_avatar
@@ -199,6 +214,7 @@ class Interface
       case answers
       when 5
       selected_avatar = Avatar.find_by(name: "Sozin")
+<<<<<<< HEAD
       when 6
       selected_avatar = Avatar.find_by(name:"Ozai")
       when 7
@@ -249,10 +265,95 @@ class Interface
       selected_avatar = Avatar.find_by(name: "Aang")
       when 30
       selected_avatar = Avatar.find_by(name: "Wan") 
+=======
+      puts "that you are #{sozin.name}, #{sozin.desc}".bold
+      when 6
+      ozai = Avatar.find_by(name:"Ozai")
+      pu
+      when 7
+      hama = Avatar.find_by(name: "Hama")
+      pu
+      when 8
+      momo = Avatar.find_by(name:"Momo")
+      pu
+      when 9
+      appa = Avatar.find_by(name: "Appa")
+      pu
+      when 10
+      mai = Avatar.find_by(name: "Mai")
+      
+      when 11
+      suki = Avatar.find_by(name:"Suki")
+      put
+      when 12
+      june = Avatar.find_by(name: "June")
+      puts
+      when 13
+      bumi = Avatar.find_by(name: "Bumi")
+      pu  
+      when 14
+      sokka = Avatar.find_by(name: "Sokka")
+      puts  
+      when 15
+      combustionman = Avatar.find_by(name: "The Combustion Man")
+      puts "that you are #  
+      when 16
+      kuruk = Avatar.find_by(name: "Kuruk")
+      puts  
+      when 17
+      tenzin = Avatar.find_by(name: "Tenzin") 
+      when 18
+      jet = Avatar.find_by(name: "Jet")
+        
+      when 19
+      gyatso= Avatar.find_by(name: "Gyatso") 
+      when 20
+      korra = Avatar.find_by(name: "Korra")
+ 
+      when 21
+      zuko = Avatar.find_by(name: "Zuko") 
+      when 22
+      toph = Avatar.find_by(name : "Toph")
+      when 23
+      azula = Avatar.find_by(name: "Azula")
+      when 24
+      roku = Avatar.find_by(name: "Roku")
+      when 25
+      kyoshi = Avatar.find_by(name: "Kyoshi")
+      when 26
+      iroh = Avatar.find_by(name: "Iroh")
+      when 27
+      yangchen = Avatar.find_by(name: "Yangchen")
+      puts "that  
+      when 28
+      katara = Avatar.find_by(name: "Katara")
+      puts "  
+      when 29
+      aang = Avatar.find_by(name: "Aang")
+      pu  
+      when 30
+      wan = Avatar.find_by(name: "Wan")
+        
+>>>>>>> 09e4c3c11035a641cef5b4dc004f8f34a0adb0ed
       when 50..100
       selected_avatar = Avatar.find_by(name: "The Cabbage Man")
     end
+<<<<<<< HEAD
     puts " "
     puts "that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
     end
 end 
+=======
+    puts "that you are #{selected_avatar.name}, #{selected_avatar.desc}".bold 
+    Quiz.create(user_id: @@user.id, avatar_id)
+  end
+  #once avatar get picked create an instance with Avatar and User Id
+
+end
+
+
+#   private
+
+  
+# end
+>>>>>>> 09e4c3c11035a641cef5b4dc004f8f34a0adb0ed
