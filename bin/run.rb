@@ -2,7 +2,6 @@ require_relative '../config/environment'
 
 interface = Interface.new()
 
-<<<<<<< HEAD
 interface.welcome
 system("clear")
 interface.question_one
@@ -36,9 +35,4 @@ system("clear")
 interface.question_fifteen
 system("clear")
 interface.assign_avatar
-
-# puts "The Code Benders!"
-=======
-interface.question_one
->>>>>>> 09e4c3c11035a641cef5b4dc004f8f34a0adb0ed
 
