@@ -42,5 +42,5 @@ interface.assign_avatar
 system("clear")
 interface.congratulations
 sleep 4
-interface.display_avatar
+# interface.display_avatar
 interface.try_again

@@ -397,11 +397,11 @@ class Interface
     But don't worry you're safe in our Repo!"
     end
 
-    def display_avatars      #need to get this displaying all the relevant avatars to the user
-       avatar = @@all_avatars
-       avatar[0].name
-       sleep 6
-    end 
+    # def display_avatars      #need to get this displaying all the relevant avatars to the user
+    #    avatar = @@all_avatars
+    #    avatar[0].name
+    #    sleep 6
+    # end 
 
     def try_again
       @@answer_total = []
