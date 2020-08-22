@@ -10,37 +10,16 @@ interface.display_login
 system("clear")
 interface.question_one
 system("clear")
-# interface.question_two
-# system("clear")
-# interface.question_three
-# system("clear")
-# interface.question_four
-# system("clear")
-# interface.question_five
-# system("clear")
-# interface.question_six
-# system("clear")
-# interface.question_seven
-# system("clear")
-# interface.question_eight
-# system("clear")
-# interface.question_nine
-# system("clear")
-# interface.question_ten
-# system("clear")
-# interface.question_eleven
-# system("clear")
-# interface.question_twelve
-# system("clear")
-# interface.question_thirteen
-# system("clear")
-# interface.question_fourteen
-# system("clear")
-# interface.question_fifteen
-# system("clear")
 interface.assign_avatar
-system("clear")
-interface.congratulations
-sleep 4
+#display_avatars 
+sleep 5
+# interface.congratulations
+# sleep 4
 # interface.display_avatar
+system("clear")
 interface.try_again
+# display_avatars 
+system("clear")
+interface.try_again
+# 
+

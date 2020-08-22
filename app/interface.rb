@@ -271,6 +271,7 @@ class Interface
         menu.choice "No", 1
       end
       @@answer_total << answer_fifteen
+      assign_avatar
     end
 
     def assign_avatar
@@ -331,8 +332,8 @@ class Interface
         selected_avatar = Avatar.find_by(name: "Aang")
         when 30
         selected_avatar = Avatar.find_by(name: "Wan") 
-        when 50..100
-        selected_avatar = Avatar.find_by(name: "The Cabbage Man")
+        else
+        selected_avatar = Avatar.find_by(name: "The-Cabbage-Man")
       end
       if @@avatar.length < 1
          @@avatar << selected_avatar
@@ -342,66 +343,103 @@ class Interface
       # puts "...that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
       puts " "
       puts " "
-
-    end
-    def congratulations
-      answer = @@answer_total.reduce(:+)
-      selected_avatar = @@avatar[0]
       congrats1 = "#{@user.name.capitalize} You will not be the strongest ally to rely on in the battle 
       to end the hundred year war, but faith has chosen you to be #{selected_avatar.name}, 
       even though #{selected_avatar.desc}.
-      Now do you wish to join a team to help in the battle to restore restore peace!?".blue
+      Now do you wish to join a team to help in the battle to restore restore peace!?".bold.colorize(:blue)
   
      congrats2 = " #{@user.name.capitalize} The strenght you have displayed before will not compare to what you 
      will accomplish now as #{selected_avatar.name} you will be an invaluable ally
      for #{selected_avatar.desc}.
      We are really close to ending the war! 
-     continue building your team to see who you meet!".blue
+     continue building your team to see who you meet!".bold.colorize(:blue)
   
      congrats3 = " #{@user.name.capitalize} You're the one we need to end the War,
      The Time has finally arrived,
      100 years passed, but now #{selected_avatar.name} 
      is here and will valiently apply your skills to end the war for 
-     #{selected_avatar.desc}, only you can save the World ".green
-
+     #{selected_avatar.desc}, only you can save the World ".bold.colorize(:blue)
      congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man #{selected_avatar.desc}
     But don't worry you're safe in our Repo!"
 
-      if answer < 9
+      if answers < 9
       puts (congrats1)
-      elsif answer > 9 && answer < 15
-      puts (congrats2)
-      elsif answer > 15 && answer < 35
-      puts (congrats3)
-      elsif answer > 50
-      puts (congrats4)
-
       sleep 10
+      elsif answers > 9 && answers < 15
+      puts (congrats2)
+      elsif answers > 15 && answers < 35
+      puts (congrats3)
+      else
+      puts "You are the Cabbage-Man But don't worry you're safe in our Repo!"
       end
 
+      #binding.pry
+      @@all_avatars << selected_avatar
+      puts " "
+      sleep 4
+      puts "...that you are #{selected_avatar.name.upcase.bold}, #{selected_avatar.desc}"
+      sleep 8
+      puts " "
 
-    congrats1 = "#{@user.name.capitalize} You will not be the strongest ally to rely on in the fight to end the hundred year war,
-    but faith has chosen you to be #{selected_avatar.name}, even though #{selected_avatar.desc}. 
-    Now do you wish to join a team tohelp in the battle to restore restore peace!?"
-
-   congrats2 = " #{@user.name.capitalize} The strenght you have displayed before will not compare to what you 
-   will accomplish now as #{selected_avatar.name} you will be an invaluable ally for #{selected_avatar.desc}.
-   We are really close to ending the war, continue building your team to see who you meet!"
-
-   congrats3 = " #{@user.name.capitalize} you The who need to end the War has finally arrived, 100 years passed, but now #{selected_avatar.name} 
-   is here and will valiently
-   apply his skills to end the war for #{selected_avatar.desc}, only you can save the World  "
-
-   congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man 
-   #{selected_avatar.desc}
-    But don't worry you're safe in our Repo!"
+     
     end
+    # def congratulations
+    #  # answer = @@answer_total.reduce(:+)
+    #  answer = 15
+    #   selected_avatar = @@all_avatars.last
+    #   congrats1 = "#{@user.name.capitalize} You will not be the strongest ally to rely on in the battle 
+    #   to end the hundred year war, but faith has chosen you to be #{selected_avatar.name}, 
+    #   even though #{selected_avatar.desc}.
+    #   Now do you wish to join a team to help in the battle to restore restore peace!?".blue
+  
+    #  congrats2 = " #{@user.name.capitalize} The strenght you have displayed before will not compare to what you 
+    #  will accomplish now as #{selected_avatar.name} you will be an invaluable ally
+    #  for #{selected_avatar.desc}.
+    #  We are really close to ending the war! 
+    #  continue building your team to see who you meet!".blue
+  
+    #  congrats3 = " #{@user.name.capitalize} You're the one we need to end the War,
+    #  The Time has finally arrived,
+    #  100 years passed, but now #{selected_avatar.name} 
+    #  is here and will valiently apply your skills to end the war for 
+    #  #{selected_avatar.desc}, only you can save the World ".green
 
-    # def display_avatars      #need to get this displaying all the relevant avatars to the user
-    #    avatar = @@all_avatars
-    #    avatar[0].name
-    #    sleep 6
-    # end 
+    #  congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man #{selected_avatar.desc}
+    # But don't worry you're safe in our Repo!"
+
+    #   if answer < 9
+    #   puts (congrats1)
+    #   sleep 10
+    #   elsif answer > 9 && answer < 15
+    #   puts (congrats2)
+    #   elsif answer > 15 && answer < 35
+    #   puts (congrats3)
+    #   else
+    #   puts "You are the Cabbage-Man But don't worry you're safe in our Repo!"
+    #   end
+
+
+        #   congrats1 = "#{@user.name.capitalize} You will not be the strongest ally to rely on in the fight to end the hundred year war,
+        #   but faith has chosen you to be #{selected_avatar.name}, even though #{selected_avatar.desc}. 
+        #   Now do you wish to join a team tohelp in the battle to restore restore peace!?"
+
+        #  congrats2 = " #{@user.name.capitalize} The strenght you have displayed before will not compare to what you 
+        #  will accomplish now as #{selected_avatar.name} you will be an invaluable ally for #{selected_avatar.desc}.
+        #  We are really close to ending the war, continue building your team to see who you meet!"
+
+        #  congrats3 = " #{@user.name.capitalize} you The who need to end the War has finally arrived, 100 years passed, but now #{selected_avatar.name} 
+        #  is here and will valiently
+        #  apply his skills to end the war for #{selected_avatar.desc}, only you can save the World  "
+
+        #  congrats4 = "#{@user.name.capitalize}, You are the Cabbage-Man 
+        #  #{selected_avatar.desc}
+        #   But don't worry you're safe in our Repo!"
+
+    def display_avatars      #need to get this displaying all the relevant avatars to the user
+       avatars = @@all_avatars
+       avatars.each{ |avatar| puts avatar.name}
+       sleep 6
+    end 
 
     def try_again
       @@answer_total = []
